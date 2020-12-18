@@ -1,0 +1,55 @@
+body {
+  font-family:'Roboto Slab', serif;
+  font-weight: 300;
+  font-size: 15px;
+  padding: 30px;
+}
+.img-container {
+  text-align: center;
+  display: block;
+  padding: 20px 0;
+}
+.txt-container {
+  /*text-align: center;*/
+  display: block;
+  padding: 80px 0;
+}
+.top-text{
+  font-family:'Libre Franklin', sans-serif; 
+  font-size: 30px;
+  color: #422a80;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.subheading {
+  font-family:'Libre Franklin', sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  color:#919191;
+  font-weight: bold;
+}
+.culture-buddy-text{
+  /*font-family:'Libre Franklin', sans-serif; */
+  /*font-size: 20px;*/
+  color: #422a80;
+  font-weight: bold;
+}
+.oblique{
+  font-style: oblique;
+}
+
+li {
+  padding: 5px;
+}
+
+b {
+  font-weight: 700;
+}
+
+.sect {
+  margin-bottom: 20px;
+}
+
+
