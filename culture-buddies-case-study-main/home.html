@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://use.fontawesome.com/0b04c030ef.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
+    <link href="/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+
+    <title>Culture Buddies</title>
+    <style>
+	.img-container {
+        text-align: center;
+        display: block;
+        padding: 20px 0;
+      }
+  	.txt-container {
+        /*text-align: center;*/
+        display: block;
+        padding: 80px 0;
+      }
+      .top-text{
+      	font-family:'Libre Franklin', sans-serif; 
+      	font-size: 20px;
+      	color: #422a80;
+      	font-weight: bold;
+      }
+      .culture-buddy-text{
+      	/*font-family:'Libre Franklin', sans-serif; */
+      	/*font-size: 20px;*/
+      	color: #422a80;
+      	font-weight: bold;
+      }
+      .oblique{
+      	font-style: oblique;
+      }
+
+	</style>
+</head>
+  <body>
+    <!-- adapted from code on https://getbootstrap.com/docs/4.0/components/navbar/ -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#research">Research</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#synthesis">Synthesis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#prototyping">Prototyping</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testing">Testing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#results">Results</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pit">PIT Reflections</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#acknowledgements">Acknowledgements</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+    	<div class="row">
+    		<div class="col-md-12">
+    			<br>
+    			<h1>Culture Buddies </h1>
+				<!-- <h2>-Mutual Aid Network to Bridge Cultures while Supporting Immigrants and Non-English Speakers in Queens</h2> -->
+				<h2>-Mutual Aid Network for Non-English Speakers in Queens</h2>
+    		</div>
+    	</div>
+
+<!-- SUMMARY -->
+
+    	<div class="container">
+    		<div class="row">
+    			
+    			<div class="col-md-5">
+    				<span class = "txt-container">
+    					<div class="row">
+    						<div class="col-md-6">
+    							<b>Team Members</b> <br>Paul Berthe, Rupal Gupta, Andrea Molina, Ramisa Murshed <br><br><br><br>
+			    				<b>Project Type</b> <br> Public Interest Technology Design Project <br>
+			    				
+		    				</div>
+		    				<div class="col-md-6">
+		    					<b> Project Vision </b> <br>Mutual Aid Network to Bridge Cultures while Supporting Immigrants and Non-English Speakers in Queens<br><br>
+		    					<b>Mentor</b> <br> Laura Kurgan <br>
+	    					</div>
+	    				</div>
+    				</span>
+    				<!-- <img class="img-fluid" src="https://via.placeholder.com/500x300.png?text=Image+of+Final+Design" alt="Image of final design"> -->
+    			</div>
+    			<div class="col-md-7">
+    				<span class = "img-container"> <img class="img-fluid" src="images/culure-buddies-graphic.png" alt="Culture Buddies Graphic"></span>
+    			</div>
+    		</div>
+			<div class="row">
+				<span class = "top-text">SUMMARY</span>
+			</div>
+    		<div class="row">
+    			<div class="col-md-2">
+    				Our Audience <br><br><br><br><br>
+    				Our Purpose <br><br><br><br><br><br>
+    				Our Solution
+				</div>
+    			<div class="col-md-10">
+    				Queens Borough in New York City is the most diverse neighborhood in the world, hosting denizens from more than 190 origins who speak more than <b>160 languages other than English</b>. These communities often experience some forms of <b>language barriers,</b> and frequently turn to the <b>Queens Public Library for help</b>, a bastion for language assistance through its numerous services delivered in its 62 local branches.<br><br>
+
+    				Despite offering more than 3,000 events per year, attended by several hundreds of thousands of people, the QPL does not have the resources to address all language needs of every community. Through its events, however, it has demonstrated a subliminal capacity to gather communities from all over Queens. <b>What if, in addition to QPL services, we could find a way for communities to assist each other directly? How could we connect them, some of whom may be willing to share advice on their experiences with others?</b>	
+    				<p><span class="culture-buddy-text">Culture Buddies a program allowing people who are registered to attend a QPL event to, if they want to, be paired together to stay on after the event to assist each other with a language needs.</span>,<br><br>
+
+    				Culture Buddies is a <i>public interest technology</i>, a social justice project that aims to enhance the Queens Public Library’s capacity to deliver free language services to the public by alleviating some of its burden of responsibility. Geared for anyone residing in broader New York City, who attends at least one QPL event per year, has at least semi-regular access to a computer/smartphone and an internet connection, and is willing to meet other members of their community, Culture Buddies is a platform that aims to form a <b>network of language-based mutual aid in the community that simultaneously allows for a bridging of cultures</b>. The program was human-centered designed using inclusive technology. It will remain entirely free and deprived of commercial advertisements for the entirety of its life-span, and will only use account data to best match buddies with no corporate ends.
+    			</div>
+    		</div>
+
+<!-- PROCESS -->
+			<br>
+			<div class="row">
+				<div class="col-md-12">
+					<span class = "top-text">PROCESS</span>
+				</div>
+			</div>
+
+<!-- 			<div class="row">
+				<div class="col-md-12">
+					<p>We based our design process off of the Public Interest Technology Design Process, an adaptation of the double diamond method used for designing Public Interest Technology, created by Lydia Chilton, Mark Hansen, Laura Kurgan, and Celeste Layne.</p>
+				</div>
+			</div> -->
+
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-10">
+					We based our design process off of the Public Interest Technology Design Process, an adaptation of the double diamond method used for designing Public Interest Technology, by Lydia Chilton, Mark Hansen, Laura Kurgan, and Celeste Layne.
+					<img class="img-fluid" src="images/pit-double-diamond.png" alt="PIT Design Process">
+				</div>
+			</div>
+
+<!-- RESEARCH -->
+			<br>
+			<div class="row">
+				<div class="col-md-12">
+					<span class = "top-text">RESEARCH</span>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-2">
+					Our Question <br><br><br><br><br>
+					Understanding Language Barriers<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+					QPL Language Services<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+					Existing Projects<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+					PIT Considerations<br><br><br><br><br><br><br><br><br><br><br>
+					Target User Types<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+					Sample persona<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+					PIT Considerations
+				</div>
+				<div class="col-md-10">
+					When we began our project, our original prompt was <b>‘How can libraries better help non-English speakers?’</b>, and our area of focus was <b>Queens Borough</b> in New York City. In addition, we wanted our project to be a <i>public interest technology</i>, or a technology built entirely for the benefit of a general public. We thus sought to answer the question <b>‘Can Public Interest Technology be designed around this concept for libraries which have a history or welcoming immigrants?’</b>.<br><br>
+
+					<div class="row">
+						<div class="col-md-6"> 
+							<img class="img-fluid" src="images/queens-languages.png" alt="Queens many Langs">
+						</div>
+						<div class="col-md-6"> 
+							By studying a publicly available statistics detailing the language diversity and needs that exist within Queens, we learnt:<br>
+							<ul>
+								<li><b>49% of households</b> in New York City speak a language that is not English;</li>
+								<li><b>138 languages</b> are spoken in the Borough;</li>
+								<li><b>190 nationalities</b> are represented in the Borough, making it the most diverse place on Earth;</li>
+								<li>More than <b>55% of Queens’ population</b> aged 5+ speaks a mother tongue other than English;</li>
+								<li>The Borough has an extensive history of immigration and resettlement, dating back to the 17th Century. New immigration flows in the 20th Century in particular contributed to the current diversity;</li>
+							</ul>
+						</div>
+					</div>
+					From this data, we were better able to understand the geographical distribution of these subpopulations, which gave us some insights into distributions which may be important for our project and allowed us to understand if we were leaving out important perspectives (PIT Question HW4).<br><br>
+					<div class="row">
+						<div class="col-md-6"> 
+							<img class="img-fluid" src="images/new-americans-qpl.png" alt="QPL NAP">
+						</div>
+						<div class="col-md-6"> 
+
+							We then researched the language services offered by the Queens Public Library, which include:<br>
+
+							<ul>
+								<li>English for Speakers of Other <b>Languages classes</b></li>
+								<li><b>Coping skills workshops</b> in several languages on immigration law, tenants’ rights, the American educational system, parenting skills, health issues, job training and domestic violence</li>
+								<li><b>Cultural arts programs</b>, ranging from monthly programs through the Culture Bridge program (e.g. introduction to Jamaica and reggae), to smaller events (e.g. Chinese literature and critical reading) for particular library patrons</li>
+								<li><b>The International Research Center</b>, located in Flushing, dedicated to special collections of international authors and books</li>
+							</ul>
+						</div>
+					</div>
+
+					<br>With this in mind, we wanted to have a broad idea of solutions that already existed, to draw inspiration from and avoid designing a project that already exists. We identified two broad categories:<br>
+
+					<ol>
+						<li>At the macro-level, <b>Executive Order No. 120</b> (which required all civic/city-service agencies to be translatable into 170 supported dialects via telecommunications services) and <b>Local Law 30</b> (which requires all city agencies to distribute documents into 10 designated languages) were the two biggest official <i>policies</i> adopted by the City of New York. To verify the extent to which these policies were put in effect, we measured the number of languages available on NYC websites</li>
+						<li>At the meso- and micro-level, hundreds of projects and technologies created by individual actors (e.g. the Queens Public Library, nongovernmental organizations, activists, or even corporations) already existed and contributed to alleviating language barriers. We in particular documented 3 existing public interest technologies seeking to address language barriers in New York (<b>Transparent Language Online</b>, the QPL’s website as a language aggregator, and <b>Cell-Ed</b>), and delved into the QPL’s language services.</li>
+					</ol>
+
+					<br>At this stage, we had a general idea of the overarching challenge of language barriers through compiled statistics, and some of the services that already existed that sought to address it. We thus began to amplify our findings by seeking individual testimonies, whilst being careful of the PIT question <b>“Is there an existing bias in the research?”</b>. We recognized that, at this stage, we had to interview as many people as possible, from any background or age. Due to the Covid-19 pandemic and the restrictions that were imposed because of it, there was already biases in our research: we conducted most interviews remotely (by Zoom or by phone), thus 1) relied on personal networks to reach out to potential participants instead of having a random sample of interviewees, and 2) could only interview people who themselves had a phone or a way to conduct a remote interview. In an ideal world, we would have been able to place calls for interviews in QPL branches, or even conduct informal interviews with random patrons at a particular location. Nonetheless, we attempted to mitigate our biases by organizing some in-person interviews, and physically obtaining spatial information.<br><br>
+
+<!-- 					<br>We initially interviewed three user types: <b>librarians</b> (whom we thought would be good starting points in order to understand the QPL’s broad range of services), as well as <b>first generation immigrants</b> and <b>second generation immigrants</b> (whom we thought would provide interesting initial perspectives into the challenges they encounter with regards to language in their daily lives).<br> -->
+
+					<!-- <br>Our User Types: -->
+					<div class="row">
+						<div class="col-md-4"> 
+							<b>(Queens Public Library) Librarians</b>
+							<img class="img-fluid" src="images/librarian.png" alt="librarian">
+						</div>
+						<div class="col-md-4"> 
+							<b>First Generation Immigrants</b>
+							<img class="img-fluid" src="images/immigrant-1.png" alt="immigrant-1">
+						</div>
+						<div class="col-md-4"> 
+							<b>Second Generation Immigrants</b>
+							<img class="img-fluid" src="images/immigrant-2.png" alt="immigrant-2">
+						</div>
+
+					</div>
+
+					<br><br>The insights we garnered from these first interviews were the following:<br>
+
+					<br><b>Librarians:</b><br>
+
+					<ul>
+						<li>Librarians all recognized the challenge of English for many communities and Queens, and were aware that many of them come to the QPL seeking language-related services (particularly ESOL classes and translation services);</li>
+						<li>People who may not speak English well who come to the library often rely on bilingual library staff to translate;</li>
+						<li>Librarians sometimes use Google translate if there are no bilingual library staff available;</li>
+						<li>People “tend to look for both first language and English materials for respective children or even if they are participating in a library's English classes”;</li>
+						<li>This tends to happen more when parents are by themselves because they often have their children translate for them or sometimes call relatives on the phone for translation assistance;</li>
+					</ul>
+
+					<br><b>First- and second-generation immigrants:</b></br>
+
+					<ul>
+						<li>People are not aware of the laws, and consequently, their rights;</li>
+						<li>First-generation immigrants often rely on their children to translate official documents or navigate important/complex processes;</li>
+						<li>Library access is “limited” for people that do not speak English;</li>
+						<li>Second-generation immigrants often bear the burden of translating for their parents from an early age;</li>
+						<li>Even when resources are available at libraries, immigrant parents still rely on their children for translation support;</li>
+						<li>There is a lack of cross-generational engagement at libraries;</li>
+						<li>There are few resources for second-generation immigrants to learn their mother tongue;</li>
+					</ul>
+
+					<br>Here is an example of a persona we designed and a user journey map, for two of the interviewees we had the chance to discuss with:</br>
+					<div class="row">
+						<div class="col-md-6">
+							<img class="img-fluid" src="images/user-profile.png">
+						</div>
+
+						<div class="col-md-6">
+							<img class="img-fluid" src="images/user-journey-map.png">
+						</div>
+					</div>
+
+					<br><br>The public interest technology question that recurrently appeared during this first research phase was <b>“Who is being included or excluded?”</b>. We previously mentioned that bias was an inevitable component of our project because of research methodologies and exogenous circumstances. In addition to that bias, we realized that language barriers are not restricted to one particular population, but is present for people who, for instance:<br>
+
+					<ul>
+						<li>May be wealthy, or impoverished;</li>
+						<li>Could be a teenager, a mother of four, or a first generation grandfather;</li>
+						<li>May have just arrived in Queens, or have lived there for a long time;</li>
+						<li>May or may not know how to use language tools like a computer or Google Translate;</li>
+						<li>May or may not have access to the Queens’ Public Library or its services;</li>
+						<li>May or may not know about particular services offered either at the QPL or elsewhere;</li>
+						<li>May or may not have an Internet connection;</li>
+					</ul>
+
+					<br>During our interviews, we realized that whatever project we ended up designing, we would inevitably include certain populations, and exclude others. Whilst it was a difficult realization (as we all took on this project with the goal of helping as many as we can), once we began working with this barrier in mind, we not only better tailored our interviews to try and understand our participants’ capacity to potentially be part of our project, but also critically thought about how best we could bring a technology forward, even if only to certain people.<br>
+				</div>
+			</div><br>
+
+<!-- SYNTHESIS -->
+			<div class="row">
+				<div class="col-md-12">
+					<span class = "top-text">SYNTHESIS</span>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-2">
+							Problem Area Narrowed <br><br><br><br><br><br><br><br><br><br><br><br>
+							User Interview Validation<br><br><br><br><br><br><br><br><br><br><br><br><br>
+							How Might We<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+							Ideation<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+							Ideas and Refined How Might We<br><br><br><br><br><br><br><br><br><br><br><br><br>
+							PIT Consideration
+						</div>
+
+						<div class="col-md-10">
+							After analysing the insights garnered in the research process, the first step we took to narrow down the field we wanted to focus on was to select the main themes of needs and opportunities that arose from our research and find previous solutions that attempted to address these gaps.<br>
+							<br>We realized that the library and the New Americans Program had already put lots of effort trying to provide accessibility for low income families, developing programs to assist inmigration issues and providing language services through platforms such as Language Line or Travis Touch, for example.<br>
+
+							<br>Although the variety and diversity of events and cultural activities offered at the QPL is rich and varied, we detected that it was necessary to put more effort in the <b>integration of culture within language services</b>, <b>bridging the intergenerational gap</b> and <b>improving the outreach strategies about the existing services</b>.<br><br>
+
+							<br>
+							<div class="row">
+								<div class="col-md-3">
+									<img class="img-fluid" src="images/interview-validation.png">
+								</div>
+								<div class="col-md-9">
+									Some of the evidences that helped us define the focus of our work are the following emotions expressed by the community:<br>
+
+									<br><span class = "oblique">❝The <b>gap between generations</b> is becoming bigger and bigger because children speak English at school, and when they come home, they go upstairs and do not talk to their parents because [their parents] do not speak English, and that is very sad.❞</span> ~Lu (1st gen, Chinese)<br>
+
+									<br><span class = "oblique">❝It was <b>really difficult</b> when I was growing up. When going to to school and the world is in English, and going home and speaking Fuzhounese there only. My mom has better English skills... But for my dad, the only way we communicate is through Fuzhounese. My grandmother only speaks Fuzhounese and is illiterate.❞</span>~Alex (2nd gen, Chinese)<br>
+								</div>
+
+							</div>
+
+							<br>We understood that  the integration of culture within the programs offered at QPL was a key factor that would promote not only intergenerational exchanges at the library, but also among different communities, and also will prevent community isolation. Additionally, we wanted to find a way in which we could also provide a more effective way of reaching the community while offering them the possibility to suggest events and activities. Therefore, the questions that guided the next steps of our work were the following ones:<br><br>
+
+							<ol>
+								<span class="culture-buddy-text"><b><li>How might we simultaneously integrate immigrants into local culture and civic culture while preserving and sharing their own?</li><br>
+								<li>How might we enable specific communities to propose an event and simultaneously communicate and facilitate participation?</li><br>
+								<li>How might we reduce the intergenerational gap between first- and second-generation immigrants?</li> </b></span>
+							</ol>
+
+							<br>During the ideation process we came up with a flood of ideas on how to address each of our questions, and elaborated mindmaps to organize them:<br>
+							<div class="row">
+								<div class="col-md-3">
+									<img class="img-fluid" src="images/hmw-one-idea.png">
+								</div>
+								<div class="col-md-3">
+									<img class="img-fluid" src="images/hmw-two-idea.png">
+								</div>
+								<div class="col-md-3">
+									<img class="img-fluid" src="images/hmw-twob-idea.png">
+								</div>
+								<div class="col-md-3">
+									<img class="img-fluid" src="images/hmw-three-idea.png">
+								</div>
+							</div>
+
+							<br>The next step of the process was to narrow down to 5 ideas for each of the questions we wanted to address. After narrowing down to 5 ideas, the most interesting ones we had were:<br>
+
+							<br>In an attempt to integrate immigrants into local culture and civic culture while preserving and sharing their own, we ideated the <b>tandem platform</b>, an application where people could offer their help for bureaucracy and immigrants can offer language lessons.<br>
+
+							<br>To enable specific communities to propose an event and simultaneously communicate and facilitate participation we thought of an <b>application for event submissions and advertising</b> that would look like Uber Eats but for events, partnering with the New Americans Program.<br>
+
+							<br>Finally, we detected that the third HMW, addressing the intergenerational gap, could be solved by the integration of culture in the first question, and that we could combine the two most exciting ideas to produce a more complete and sophisticated solution. During the process, <b>the most important question that influenced our design has been how we can develop a tool that can touch on multiple generations and address larger societal issues without leaving any vulnerable groups behind</b>.<br>
+
+							<br>While synthesizing our research and progressing through the ideation process, we placed a lot of consideration on the question, <b>“What facets of the larger problem are being overlooked?”</b> First, we recognized that our two ideas required Internet access, which excluded many parts of the community who may not necessarily have access to it. Additionally, we noted that when doing community outreach, it is difficult to reach many populations because the people doing outreach don’t always know the best ways to reach the communities they are trying to reach while making members of those communities feel comfortable and willing to interact, especially if they are not part of those communities themselves. With these facets of the larger problem in mind, we tried to think of strategies that could connect our project to the physical world in order to come up with a public interest solution.<br>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+<!-- PROTOTYPING -->
+			<br>
+			<div class="row">
+				<div class="col-md-12">
+					<span class = "top-text">PROTOTYPING</span>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class = "col-md-2">
+
+
+				</div>
+				<div class="col-md-10">
+					<p>Through prototyping, our biggest goal was simplifying design over several rounds of iterations: Low-fi, Mid-fi, High-fi #1, High-fi #2</p>
+
+					<h4>Low-fidelity prototype [Design Prototype]:</h4>
+					
+					<p>We had multiple low fidelity prototypes to begin with, including a database of activity providers for QPL, a tandem mutual-aid platform, an event-organizing app for the community, and a localized marketing toolkit.</p>
+
+					<p><b>Our first prototype was the Culture Bridge Platform, a database of activity providers for QPL.</b> <p>
+					<p>We came up with this prototype after a conversation with Yang Zing, the QPL Flushing Branch Director, who told us about Culture Bridge Program:</p>
+					<div class="row">
+						<div class="col-md-6">
+							<img class="img-fluid" src="images/culture-bridge-qpl.png">
+						</div>
+						<div class="col-md-6">
+							<p>So the Culture Bridge program is an officialization/standardization of the cultural events initiative of the Queens Library Flushing Branch. Its components include:
+							<ul>
+								<li>Flyer is bilingual</li>
+								<li>Presenters explain a little bit about the culture</li>
+								<li>MC is multilingual</li>
+								<li>Program is a culture education program</li>
+								<li>2-3 years ago was launched ⇒ cover as many cultures as we can (dependent on budget, they change cultures every year)</li>
+								<li>Last year: Jamaica (promoted reggae artists)</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-md-6">
+							<img class="img-fluid" src="images/culture-bridge.png">
+						</div>
+						<div class="col-md-6">
+							<p>Biggest pain: finding performers and artists</p>
+							<p>Through this engagement, we decided to implement the Culture Bridge Platform, which at the moment was a <b>database to help find performers and artists for cultural events</b> at the QPL, which would allow members of the community to share their culture and perform in different languages.</p>
+
+						</div>
+					</div>
+
+					<p>The next prototype we integrated was a tandem mutual aid platform. We wanted to create a platform where people can offer their help and get help, such as getting help with filling out government documents or with language learning. We decided to create a prototype for this idea because much of the engagement we had with various first- and second-generation immigrants centered around the difficulty of doing tasks for non-English-speakers that involved complicated language and the burden that is placed on many second-generation immigrants of serving as translators for their parents:</p>
+
+					<ul>
+						<li>Joseph: parents have a harder time with data as they do speak only Spanish</li>
+						<li>Sandra: filled out forms for parents because they did not know Bengali</li>
+						<li>Alex: I have helped my mom fill in government and tax documents.</li>
+						<li>Evelina: “I had to take on the role of translator for my mother and father. This meant that at young ages, I would have to look at extremely complicated governmental documents and state mandated documents for both my parents and myself”</li>
+					</ul>
+
+					<p>While creating these prototypes, we had to ask ourselves, “Have you identified the questions and risks most relevant to the chosen technology?”. For this tandem mutual aid platform, we asked ourselves, How do we keep the platform very simple and user friendly? How do we incentivize people to volunteer their time? How do we make sure that there are no fake requests/volunteer profiles? What do we scope it to? How do we not burden the library and its staff in making this facilitation happen? These questions helped later guide our design decisions.</p>
+
+					<p>Our third low-fidelity prototype was an events app that would allow individuals and collectives to create and submit an event. The app was also intended to help to find performers, instructors or any other thing needed for the realization of the event. The app would allow local businesses to advertise their places as potential locations where to host the events, with the local businesses obtaining visibility in exchange. We decided to go with this prototype because during our research phase, we observed that there is not a place to advertise QPL’s New Americans Program’s Cultural Programs, and there is not a tool that helps people and communities to propose event ideas to the library, showing a lack of agency.</p>
+
+					<p>Again, we evaluated some of the risks that accompanied this events app, which included risks on both the institutional side (the library’s side) and the user side. Some of the risks on the institutional side were that the library could reject to do “extra work”, such as approving and moderating additional events, and that they could also reject the idea of advertising of other events that take place outside the library, especially at local businesses. Some of the risks we assessed on the user side included the facts that people not comfortable using applications will have a barrier, and the “approval” requirement may force the library to develop policies related to its criteria, since some users may feel “unfairly rejected”. Again, we used these risks to help guide our future design decisions.</p>
+
+					<p>Our final low-fidelity prototype was a localized marketing toolkit, which allowed event organizers to find areas in which they want to focus on certain communities for events that they think will benefit those communities, and allowed local essential and non-essential businesses to sign up to promote an event, getting compensated in return. We decided to create a prototype of this based on the following observation:</p>
+
+					<p>Organizers are often not integrated in the communities they are aiming to reach, making it difficult to understand how to get these community members to actually attend these events. When organizers do try to tap into these communities and are somewhat successful, they often are only able to capture one specific demographic of the community and miss out on advertising their events to members of the community who would still benefit from these events, but are more difficult to get into contact with.</p>
+
+					<p>Some of the questions and risks we identified relating to this localized marketing toolkit were: How will we get local businesses to use the app in the first place? How much compensation must we give to local businesses? How will we measure success in event recruitment by local businesses? How will we allow event participants to suggest their own events? How will we allow event participants to give feedback on events? We kept these questions in mind when moving forward with the prototyping stage and deciding on a single prototype.</p>
+
+					<p>Despite having four low-fidelity prototypes, we eventually decided to combine the events app with the tandem platform app as well as integrating the database of activity providers after getting feedback to do so, as there was co-existing synergy between getting help/offering help to the community and creating community participation in events.</p>
+
+					<h4>Mid-fidelity prototype [Design Prototype]:</h4>
+
+					<p>For our mid-fidelity prototypes, we tried to combine some of our ideas into an “events” platform. As you can see at the first page, for our mid-fidelity prototype, users could do multiple things, i.e. attend events (i.e. attend the events that QPL is already organizing), organize events (i.e. create own event using community space like the library), host events (i.e. community centers and businesses offer their space for events), and get help (i.e. users get help before/after an event from community members).</p>
+
+					<p>Feedback: There was too much going on, and the goal of the platform was unclear and confusing. Instead of laying ourselves too thin, we decided to prioritize the journey of getting help before/after events, as a means of creating a community mutual aid-network, while enabling community participation. We also got the feedback that the “JOIN” as a call to action was vague, and unclear.</p>
+
+					<h4>High-fidelity #1: [Design Prototype]</h4>
+
+					<p>This platform allows Queens residents to get assistance from their fellow community members before or after an event held at the QPL.</p>
+
+					<p>Feedback: While the interactions were intuitive, we learnt that users did not like reading the army of text, so we had to think about a succinct way of communicating the idea. Some users still had issues understanding what the platform was doing. We also learnt that “Get Help” and “Offer Help” did not sound sincere, and chose to pivot to “Find Buddy” and “Be Buddy” instead.</p>
+
+					<h4>High-fidelity #2: after feedback! [Technical Prototype]</h4>
+
+					<p>We made the interactions and the design on the technical prototype match that of the high-fidelity #1.</p>
+
+					<p>Based on the feedback from this, we changed the “Get Help/Offer Help” to “Find Buddy/Be Buddy”. We also made the home-page less text-heavy, more intuitive.</p>
+
+					<p>As we developed our high-fidelity prototypes, we continued to assess risks associated with our prototypes. First, we asked ourselves, “Have we identified the questions and risks most relevant to this population?” We followed this up with more questions: How are we going to promote the platform? How will we translate the platform in other languages? How will the platform be accessible for less tech-savvy users? We need a strong initial user base for the tandem to work, so we had a call with Nick Buron, the Chief Librarian, to discuss the promotion of the platform in the QPL marketing ecosystem. However, we were unable to address the other questions and plan to find ways to translate the platform into other languages and make the platform more accessible for less tech-savvy users in future iterations.</p>
+
+					<h4>Visual Language and Design</h4>
+
+					<p>As we were designing specifically for QPL and the communities that it serves, the visual language to keep at its heart the diversity of Queens community through various forms.</p>
+
+					<p>Color Palette: We utilized QPL’s website and logo’s color palette, utilizing shades of purple, black and white, as seen in the High-fidelity iteration of our prototype</p>
+
+					<p>On research, we found “QPL’s main color is now purple, a color associated with some of the qualities QPL seeks to cultivate, such as wisdom, creativity, dignity, and ambition, and a secondary palette of colors highlights the vibrancy and diversity of the public the Library serves.”</p>
+
+					<p>Typography: We used sans-serif fonts throughout our prototype. We chose to use Sans Serif, rather than Serif because we wanted to be associated with the feelings of casual, informal, friendly, and very approachable rather than traditional, established and trustworthy. It is, afterall, a platform for Queens residents to find buddies and offer to be buddies.</p>
+
+					<p>Graphic: We used some iconography to explain the concept of our Culture Buddy program that is accessible through a visual, eliminating the need to read long sentences. This effort makes absolutely clear that the diverse communities was to make it clear to the target audience what the platform was about</p>
+
+				</div>
+			</div>
+
+<!-- TESTING -->
+
+			<div class="row">
+				<div class="col-md-12">
+					<h3>Testing</h3>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<p>Throughout each prototyping stage, we tested each prototype on many different users to evaluate the effectiveness of each of the prototypes and further understand the domain and interaction with the community, as highlighted in the PIT double diamond design process.</p>
+
+					<p>After creating our four initial low-fidelity prototypes, a database of activity providers for QPL, a tandem mutual-aid platform, an event-organizing app for the community, and a localized marketing toolkit, based on feedback we received from instructors and classmates, we decided to merge these prototypes to end up with only two prototypes: the Culture Bridge Platform and the Tandem Platform and Events Management System. These merged prototypes were then tested on target users, particularly first- and second-generation immigrants, for usability.</p>
+
+					<p>Much of the feedback for the mid-fidelity Culture Bridge Platform prototype criticized the prototype’s lack of understandability or intuitiveness; most users that we tested on were unable to understand what the purpose of the Culture Bridge Platform was. Some important feedback from these tests is highlighted below:</p>
+
+					<p>Ana (1st gen, Spanish) - “I don't understand well how I can find help. I would like to find help without going to an event”</p>
+
+					<p>Tianyu (1st gen, Chinese) - “You need a better description at the front site, so people understand that it is not just about events, but that is building community and offering social help”</p>
+
+					<p>This feedback greatly helped influence our design, as we learned that while the purpose of our program might be clear to us, the people who designed it, it may not always be clear to others.</p> 
+
+					<p>During this round of testing, we also tested our second combined prototype, the Tandem Platform and Events Management System. Like the Culture Bridge Platform, we conducted usability testing on first- and second-generation immigrants who we were able to contact easily, many of whom were close in age and background to us.</p>
+
+					<p>The testing results we received for the Tandem Platform and Events Management System revealed a similar issue as to the main issue we experienced with the Culture Bridge Program--a lack of clarity. For this prototype, much of the criticism received from users we tested on related to the presence of terms or wording that was unclear:</p>
+
+					<p>Sandra (2nd gen, Bengali): “You need to more clearly define what things are, like compensation and what event status symbols mean.”</p>
+
+					<p>Amy (2nd gen, Chinese): “It’s not clear what exactly an event organizer or activity provider / facilitator is”</p>
+
+					<p>Like the Culture Bridge Platform, after testing the Tandem Platform and Events Marketing Toolkit, we learned that we cannot assume the user will always understand the language or wording of our program.</p>
+
+					<p>One of the PIT questions that we strongly considered after reflecting on our feedback for this round of testing was “Does the population you tested on reflect the most vulnerable populations?” To that, we answered NO. While many of the users we tested come from low-income areas and include target first- and second- generation immigrants, they also were mostly all college-educated, had access to the Internet, and were able to get through some testing on a simple video or phone call. Some of the most vulnerable populations that we’re designing for are from low-income communities that don’t have access to the Internet and may not have a college education. Additionally, all of the people we tested our prototypes on were in a similar age range to us, so we failed to include older users who may not be as technologically-savvy in our testing of our medium-fidelity prototypes. Because of this, we had to refer back to our research to think about possible issues that vulnerable populations may run into while using our program.</p>
+
+					<p>The feedback we received from our first round of user testing in tandem with our reflections on our lack of testing on the most vulnerable populations greatly helped influence our design decisions, as in the next iteration, we focused on optimizing our prototype to be simpler, clearer, and easier to understand, both in terms of the program’s objective and the language used in the program, the latter of which is extremely important because some of our targeted users are non-English-speaking immigrants.</p>
+
+					<p>Taking this feedback and research into consideration, we decided to combine the Culture Bridge Platform and the Tandem Platform and simplified the program to only include the actions of “Attend an Event” and “Organize an Event,” removing “Host an Event” and “Get Help” as having additional actions confused users, especially since the title descriptors were not clear for the latter two. We also decided to include a short explanation of what the Culture Bridge Platform is meant to accomplish.</p>
+
+					<p>Before testing our next medium-fidelity prototypes, we received feedback from instructors and classmates that suggested that our program is still too complicated. We realized that our goal for the scope of this class was to create a functional prototype that does one thing well, and we decided that we wanted to focus on building our prototype to center around the “Attend an Event” interaction, where people who need language-related assistance can be matched with those offering such assistance while granting the ability to attend a cultural event at QPL.</p>
+
+					<p>At this stage, we realized that while we took into consideration the fact that the purpose of the Culture Bridge Platform was not easily understood, we failed to account for some of the areas we could improve our program based on our reflections of the PIT question, particularly the inaccessible language used throughout the program. Thus, we adapted the introductory text on the landing page to use more accessible language and changed the title of the program from “Culture Bridge Platform” to “Culture Buddies.”</p>
+
+					<p>We then tested our updated design prototype on several users similar to the users that we had tested our prototypes on previously. We received a lot of positive feedback, such as the interface being clean and visually appealing, but most of the criticism we received once again centered around the lack of clarity in our language and difficulty understanding the purpose of the Culture Buddies program. Users specifically pointed out issues with the explanatory text on the landing page and the “Get Help” and “Offer Help” buttons on the events page:</p>
+
+					<p>Maty (2nd gen immigrant): “The welcome message is confusing and does not explain the concept well.” ; “‘Get help’ is very misleading, as I assume it means getting help navigating the website. I’d write something like ‘volunteer help’ instead.”</p>
+
+					<p>Jules (expatriate): “Confused about what the platform does exactly.”</p>
+
+					<p>During our second round of testing, we also tested our technical prototype. Some of the risk questions we assessed based on prior feedback and testing include: What does the platform do? What do “get help” and “offer help” mean? Are interactions easy to understand/follow? We received similar criticism on the technical prototype as we did with the medium-fidelity design prototype:</p>
+
+					<p>Amy (2nd gen, Chinese): “Functionality of the platform was unclear”</p>
+
+					<p>Seyun (1st gen, Korean): “Confused by the ‘help’ in ‘get help’ and ‘offer help’”</p>
+
+					<p>Pranava (bilingual, South Asian teen): “Home page: text too long! People do not like reading!”<p>
+
+					<p>Anju (bilingual, South Asian 40 y/o): “Thought that ‘get help’ was basically translating the event from its language of delivery to the selected language!”</p>
+
+					<p>We returned to the question, “Does the population you tested reflect the most vulnerable populations?” Our answer was once again NO. Although we did test on some first- and second-generation immigrants as we did in our previous round of testing, we were once again unable to reach the most vulnerable populations. Since most of our group is not currently located in the NYC area, most of the people we tested our prototypes on were people who don’t live in New York, who would then never use the Culture Buddies program. We did test on one user who is older and not technologically fluent, but the rest of the users we tested on were decently comfortable using technology. However, although we tried our best to make our testing population more reflective of the most vulnerable populations, restraints such as physical location and COVID-19 made it very difficult for us to seek out and contact these users to participate in our tests. In future iterations, we hope to test on these more vulnerable populations.</p>
+
+					<p>Reflecting on this again, we made our goal for the next iteration to combat the Culture Buddies program’s inaccessible language and unclear purpose. These influenced the next major design decisions we made in our final (for now) prototype. First, we added a visual to the landing page that illustrates how the Culture Buddies program works, removing the long textual explanation of the program and adding a short, simple sentence below the illustration to complement it. By doing this, we hoped to not only make the purpose of Culture Buddies clearer, but we also hoped to make it easier for non-English speakers to comprehend as visuals can be more easily understood than text by those with limited English proficiency.</p>
+
+					<p>Finally, based on the feedback, we decided to change “Get Help” and “Offer Help” to be more clear and consistent with our title: Culture Buddies. We changed “Get Help” into “Find a Buddy,” while changing “Offer Help” into “Become a Buddy.” We also changed the language used to describe the rest of the buddy-related event details, such as the languages spoken by buddies attending the event and the language-related help offered by buddies attending the event to make it easier and clearer to understand.</p>
+				</div>
+			</div>
+
+<!-- RESULTS -->
+
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Results</h2>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<p>When users access the Culture Buddies program, they’re first able to view a short description of the program and view an illustration of the process. They’re also able to log into an account, or create one if they need to, which stores basic information about their needs and interests to streamline the process of finding a buddy or becoming a buddy.</p>
+
+					<p>When the user clicks “Find an Event,” they are redirected to a page detailing upcoming events that are being offered by QPL. Under each event are several details about the types of language-related help that people who have already chosen to be buddies can assist with, such as filling out forms in English or Mandarin translation. It also displays the languages spoken by buddies attending that event. Users can also filter events to more easily search for what they’re looking for. If they can’t find an event they’re interested in, users are also able to submit proposals for events they might want to see at QPL, also giving them the opportunity to share their own culture.</p>
+
+					<p>Once a user is able to find an event that they’re interested in, they can choose to find a buddy for it if they need language-related help or become a buddy if they want to help someone out.</p>
+
+					<p>For example, a given user wants to find a buddy who can help them with Mandarin translation, so they will click the “Find a Buddy” button corresponding to the Watercolor Basics: Art and Culture event, select that they want a Mandarin translation buddy, then choose a buddy. The system then notifies the buddy that they have been selected via email along with instructions for what to do on the day of the event.</p>
+
+					<p>On the other hand, if a user wants to be a buddy for an event they’re interested in attending, they can click “Be a Buddy,” and they will have a chance to offer help based on their interests and skills as they indicated when they made an account. They also will indicate whether they want to help before or after the event. They’ll then receive a confirmation that their request to be a buddy has gone through.</p>
+
+					<p>Together, these interactions form a network of language-based mutual aid in the community that simultaneously allows for a bridging of cultures.</p>
+
+					<p>The feedback we received on this final prototype (for now) was generally positive and emphasized ease of usability, something that we had made our goal from the start since our program was designed for use particularly by immigrants and non-English speakers:</p>
+
+					<p>Gaurav (1st gen, Hindi): “I appreciate how clear and straightforward the instructions are.”</p>
+
+					<p>Drason (1st gen, Chinese): “I enjoy how clean the site looks, it looks simple and easy to navigate.”</p>
+
+					<p>However, users that we tested our final prototype on also suggested that we could make the program even more usable by including things such as color coding on the events page based on different languages to make it easier to recognize information on first glance and showing the category that events can be filtered by directly on the event cards.</p>
+
+					<p>We will soon meet with Nick Buron, QPL’s Chief Librarian, to discuss the implementation of the Culture Buddies program and its integration with the QPL website. However, that does not mean our work is done, we plan to further iterate on our design and technical prototype to better address the concerns we had for our project throughout this course, that is, we hope to engage with more vulnerable populations to truly understand the needs of those who may not have the same privileges and access as the populations we engaged with during our research process, and we also hope to find more ways to ensure that Culture Buddies is free of bias and is something that people of all cultures and backgrounds will be open to using.</p>
+
+
+				</div>
+			</div>
+
+
+<!-- PIT REFLECTIONS -->
+
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Reflections on the PIT Process</h2>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<p>The PIT Double Diamond has been both a useful and challenging resource. On one hand, it reminded us about important steps that we couldn't leave unattended before moving to the next phase, but it simultaneously forced us to move forward even if previous steps were not yet fully completed. This pressure to move on was necessary in order to not get stuck at one particular stage. Engaging with PIT questions through the design process was a consistent reminder to take a step back and think critically about the risks of creating the solutions our team was proposing.</p>
+ 
+					<p>Additionally, taking a public interest technology approach on this project forced us to think about our target users from a different lens. Often, when designing digital products, there is a specific target demographic in mind that the product serves, and designers only really need to design for that target demographic. However, with public interest technology, our goal is to design something that is usable and accessible by all populations, even the most vulnerable ones. Keeping this in mind, throughout our project, we learned a lot about how to make our program more accessible, in terms of both usability and understandability of the purpose and language of the program. Taking a public interest technology approach to design is something that requires empathy and understanding, something we became more aware of as we progressed through our project.</p>
+ 
+					<p>We would remind anyone that wants to put into practice the PIT Double Diamond design process of the importance of coming back to testing and interviewing at any part of the process. The most important decisions we took in our project were based on the outcome of these two phases, with engagement truly being the most important part of our research.</p>
+
+				</div>
+			</div>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+		<div class="row">
+				<div class="col-md-12">
+					<h2>Acknowledgements</h2>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<p>We would firstly like to thank our mentor, Laura Kurgan, for advising us through the duration of our entire project, helping us get valuable data and connections to aid with our research and engagement process, and providing us with feedback that really influenced a lot of our design decisions.</p>
+
+					<p>We would also like to thank Nick Buron for taking the time to discuss the possibility of turning our prototypes into a reality.</p>
+
+					<p>We want to thank the other PIT instructors, Lydia Chilton, Mark Hansen, and Celeste Layne, for creating the PIT Double Diamond design process, using critical questions to help guide us through our public interest technology project.</p>
+
+					<p>Finally, we would like to thank all of our classmates along with our TAs, Anne-Laure Razat and Stacy Tao, for always providing us with incredible feedback, much of which helped influence our design decisions.</p>
+
+					<p>We learned a lot through this process, and none of it would have been possible without all of your help.</p>
+				</div>
+			</div>
+
+    	</div>
+    </div>
+
+
+  </body>
+</html>
