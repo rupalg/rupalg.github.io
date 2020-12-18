@@ -35,6 +35,7 @@ body {
   /*font-size: 20px;*/
   color: #422a80;
   font-weight: bold;
+  font-size: 20px;
 }
 .oblique{
   font-style: oblique;
@@ -49,7 +50,7 @@ b {
 }
 
 .sect {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .quote {
@@ -70,4 +71,30 @@ b {
 
 .fa-user-circle {
   color: #422a80;
+}
+
+.fa-hands-helping {
+  color: #422a80;
+}
+
+h1, h3, h5 {
+  font-family: 'Libre Franklin', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.subhead {
+  font-family:'Libre Franklin', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  color:#919191;
+  font-weight: bold;
+}
+
+.names {
+  margin-top: -15px;
+  font-family:'Libre Franklin', sans-serif;
+  font-size: 12px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
