@@ -130,8 +130,9 @@
     			<div class="col-md-10">
     				Queens Borough in New York City is the most diverse neighborhood in the world, hosting denizens from more than 190 origins who speak more than <b>160 languages other than English</b>. These communities often experience some forms of <b>language barriers,</b> and frequently turn to the <b>Queens Public Library for help</b>, a bastion for language assistance through its numerous services delivered in its 62 local branches.<br><br>
 
-    				Despite offering more than 3,000 events per year, attended by several hundreds of thousands of people, the QPL does not have the resources to address all language needs of every community. Through its events, however, it has demonstrated a subliminal capacity to gather communities from all over Queens. <b>What if, in addition to QPL services, we could find a way for communities to assist each other directly? How could we connect them, some of whom may be willing to share advice on their experiences with others?</b>	
-    				<p><span class="culture-buddy-text">Culture Buddies a program allowing people who are registered to attend a QPL event to, if they want to, be paired together to stay on after the event to assist each other with a language needs.</span>,<br><br>
+    				Despite offering more than 3,000 events per year, attended by several hundreds of thousands of people, the QPL does not have the resources to address all language needs of every community. Through its events, however, it has demonstrated a subliminal capacity to gather communities from all over Queens. <b>What if, in addition to QPL services, we could find a way for communities to assist each other directly? How could we connect them, some of whom may be willing to share advice on their experiences with others?</b><br><br>
+
+    				<p><span class="culture-buddy-text">Culture Buddies is a program allowing people who are registered to attend a QPL event to, if they want to, be paired together to stay on after the event to assist each other with a language needs.</span>,<br><br>
 
     				Culture Buddies is a <i>public interest technology</i>, a social justice project that aims to enhance the Queens Public Library’s capacity to deliver free language services to the public by alleviating some of its burden of responsibility. Geared for anyone residing in broader New York City, who attends at least one QPL event per year, has at least semi-regular access to a computer/smartphone and an internet connection, and is willing to meet other members of their community, Culture Buddies is a platform that aims to form a <b>network of language-based mutual aid in the community that simultaneously allows for a bridging of cultures</b>. The program was human-centered designed using inclusive technology. It will remain entirely free and deprived of commercial advertisements for the entirety of its life-span, and will only use account data to best match buddies with no corporate ends.
     			</div>
@@ -388,20 +389,20 @@
 				<div class="col-md-10">
 					<p>Through prototyping, our biggest goal was simplifying design over several rounds of iterations: Low-fi, Mid-fi, High-fi #1, High-fi #2</p>
 
-					<h4>Low-fidelity prototype [Design Prototype]:</h4>
+					<h4>Low-fidelity prototype</h4>
 					
 					<p>We had multiple low fidelity prototypes to begin with, including a database of activity providers for QPL, a tandem mutual-aid platform, an event-organizing app for the community, and a localized marketing toolkit.</p>
 
-					<p><b>Our first prototype was the Culture Bridge Platform, a database of activity providers for QPL.</b> <p>
+					<p><b>Low-fidelity prototype #1: the Culture Bridge Platform, a database of activity providers for QPL.</b> <p>
 					<p>We came up with this prototype after a conversation with Yang Zing, the QPL Flushing Branch Director, who told us about Culture Bridge Program:</p>
 					<div class="row">
 						<div class="col-md-6">
 							<img class="img-fluid" src="images/culture-bridge-qpl.png">
 						</div>
 						<div class="col-md-6">
-							<p>So the Culture Bridge program is an officialization/standardization of the cultural events initiative of the Queens Library Flushing Branch. Its components include:
+							<p>The <b>Culture Bridge program</b> is an officialization/standardization of the cultural events initiative of the Queens Library Flushing Branch. Its components include:
 							<ul>
-								<li>Flyer is bilingual</li>
+								<li>Program Flyer is bilingual</li>
 								<li>Presenters explain a little bit about the culture</li>
 								<li>MC is multilingual</li>
 								<li>Program is a culture education program</li>
@@ -410,7 +411,7 @@
 							</ul>
 						</div>
 					</div>
-					
+					<br>
 					<div class="row">
 						<div class="col-md-6">
 							<img class="img-fluid" src="images/culture-bridge.png">
@@ -418,44 +419,89 @@
 						<div class="col-md-6">
 							<p>Biggest pain: finding performers and artists</p>
 							<p>Through this engagement, we decided to implement the Culture Bridge Platform, which at the moment was a <b>database to help find performers and artists for cultural events</b> at the QPL, which would allow members of the community to share their culture and perform in different languages.</p>
+						</div>
+					</div>
+					<br><br>
+					<p><b>Low-fidelity prototype #2: the Tandem Mutual Aid Platform</b> <p>
+					<div class="row">
+						<div class="col-md-6">
+							<img class="img-fluid" src="images/tandem-platform-1.png">
+							<img class="img-fluid" src="images/tandem-platform.png">
+						</div>
+						<div class="col-md-6">
+							<p>Tandem mutual aid platform: a platform where people can <b>offer their help and get help</b>, such as getting help with filling out government documents or with language learning. We decided to create a prototype for this idea because much of the engagement we had with various first- and second-generation immigrants centered around the <b>difficulty of doing tasks for non-English-speakers</b> that involved complicated language and the burden that is placed on many second-generation immigrants of serving as translators for their parents:</p>
+
+							<ul>
+								<li>Joseph: parents have a harder time with data as they do speak only Spanish</li>
+								<li>Sandra: filled out forms for parents because they did not know Bengali</li>
+								<li>Alex: I have helped my mom fill in government and tax documents.</li>
+								<li>Evelina: “I had to take on the role of translator for my mother and father. This meant that at young ages, I would have to look at extremely complicated governmental documents and state mandated documents for both my parents and myself”</li>
+							</ul>
+						</div>
+					</div>
+					<p> <u>PIT Considerations</u>: We asked if we <b>"Have you identified the questions and risks most relevant to the chosen technology?"</b>. For this tandem mutual aid platform, we asked ourselves, How do we keep the platform very simple and user friendly? How do we incentivize people to volunteer their time? How do we make sure that there are no fake requests/volunteer profiles? What do we scope it to? How do we not burden the library and its staff in making this facilitation happen? These questions helped later guide our design decisions.</p><br>
+
+					<p><b>Low-fidelity prototype #3: Events App, create and submit events</b> <p>
+					<div class="row">
+						<div class="col-md-6">
+							<img class="img-fluid" src="images/events-app.png">
+						</div>
+
+						<div class="col-md-6">
+							<p>Prototype is an <b>events app that would allow individuals and collectives to create and submit an event</b>. The app was also intended to help to find performers, instructors or any other thing needed for the realization of the event. The app would allow local businesses to advertise their places as potential locations where to host the events, with the local businesses obtaining visibility in exchange. We decided to go with this prototype because during our research phase, we observed that there is not a place to advertise QPL’s New Americans Program’s Cultural Programs, and there is not a tool that helps people and communities to propose event ideas to the library, showing a lack of agency.</p>
+						</div>
+					</div>
+
+					<p> <u>PIT Considerations</u>: Again, we evaluated some of the <b>risks</b> that accompanied this events app, which included risks on both the institutional side (the library’s side) and the user side. Some of the risks on the institutional side were that the library could reject to do “extra work”, such as approving and moderating additional events, and that they could also reject the idea of advertising of other events that take place outside the library, especially at local businesses. Some of the risks we assessed on the user side included the facts that people not comfortable using applications will have a barrier, and the “approval” requirement may force the library to develop policies related to its criteria, since some users may feel “unfairly rejected”. Again, we used these risks to help guide our future design decisions.</p>
+
+					<p><b>Low-fidelity prototype #4: Localized Marketing Toolkit</b> <p>
+					<div class="row">
+						<div class="col-md-6">
+							<img class="img-fluid" src="images/marketing-toolkit.png">
+						</div>
+
+						<div class="col-md-6">
+							<p>Localized marketing toolkit which <b>allows event organizers to market events</b> that benefit Queens' communities. It allows local essential and non-essential businesses to sign up to promote an event, getting compensated in return. We created the prototype because Organizers are often not integrated in the communities they are aiming to reach. When organizers do try to tap into these communities and are somewhat successful, they often are only able to capture one specific demographic of the community and miss out on advertising their events to members of the community who would still benefit from these events, but are more difficult to get into contact with.</p>
 
 						</div>
 					</div>
 
-					<p>The next prototype we integrated was a tandem mutual aid platform. We wanted to create a platform where people can offer their help and get help, such as getting help with filling out government documents or with language learning. We decided to create a prototype for this idea because much of the engagement we had with various first- and second-generation immigrants centered around the difficulty of doing tasks for non-English-speakers that involved complicated language and the burden that is placed on many second-generation immigrants of serving as translators for their parents:</p>
+					<p><u>PIT Considerations</u>: Some of the <b>questions and risks</b> we identified relating to this localized marketing toolkit were: How will we get local businesses to use the app in the first place? How much compensation must we give to local businesses? How will we measure success in event recruitment by local businesses? How will we allow event participants to suggest their own events? How will we allow event participants to give feedback on events? We kept these questions in mind when moving forward with the prototyping stage and deciding on a single prototype.</p>
 
-					<ul>
-						<li>Joseph: parents have a harder time with data as they do speak only Spanish</li>
-						<li>Sandra: filled out forms for parents because they did not know Bengali</li>
-						<li>Alex: I have helped my mom fill in government and tax documents.</li>
-						<li>Evelina: “I had to take on the role of translator for my mother and father. This meant that at young ages, I would have to look at extremely complicated governmental documents and state mandated documents for both my parents and myself”</li>
-					</ul>
+					<p><b>Low-fidelity prototypes Conclusion Moving forward:</b></p>
 
-					<p>While creating these prototypes, we had to ask ourselves, “Have you identified the questions and risks most relevant to the chosen technology?”. For this tandem mutual aid platform, we asked ourselves, How do we keep the platform very simple and user friendly? How do we incentivize people to volunteer their time? How do we make sure that there are no fake requests/volunteer profiles? What do we scope it to? How do we not burden the library and its staff in making this facilitation happen? These questions helped later guide our design decisions.</p>
+					<p>Despite having four low-fidelity prototypes, we eventually decided to <b>combine the events app with the tandem platform</b> as well as integrating the database of activity providers after getting feedback to do so, as there was co-existing synergy between getting help/offering help to the community and creating community participation in events.</p>
 
-					<p>Our third low-fidelity prototype was an events app that would allow individuals and collectives to create and submit an event. The app was also intended to help to find performers, instructors or any other thing needed for the realization of the event. The app would allow local businesses to advertise their places as potential locations where to host the events, with the local businesses obtaining visibility in exchange. We decided to go with this prototype because during our research phase, we observed that there is not a place to advertise QPL’s New Americans Program’s Cultural Programs, and there is not a tool that helps people and communities to propose event ideas to the library, showing a lack of agency.</p>
+					<h4>Mid-fidelity prototype</h4>
 
-					<p>Again, we evaluated some of the risks that accompanied this events app, which included risks on both the institutional side (the library’s side) and the user side. Some of the risks on the institutional side were that the library could reject to do “extra work”, such as approving and moderating additional events, and that they could also reject the idea of advertising of other events that take place outside the library, especially at local businesses. Some of the risks we assessed on the user side included the facts that people not comfortable using applications will have a barrier, and the “approval” requirement may force the library to develop policies related to its criteria, since some users may feel “unfairly rejected”. Again, we used these risks to help guide our future design decisions.</p>
+					<div class="row">
+						<div class="col-md-6">
+							<img class="img-fluid" src="images/mid-fidelity-one.png">
+						</div>
+						<div class="col-md-6">
+							<p><b>Iteration One</b><br>For our mid-fidelity prototypes, we tried to combine some of our ideas into an “events” platform. As you can see at the first page, for our mid-fidelity prototype, users could do multiple things, i.e. attend events (i.e. attend the events that QPL is already organizing), organize events (i.e. create own event using community space like the library), host events (i.e. community centers and businesses offer their space for events), and get help (i.e. users get help before/after an event from community members).</p>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-md-6">
+							<img class="img-fluid" src="images/mid-fidelity-two.gif">
+						</div>
+						<div class="col-md-6">
+							<b>Iteration Two</b>
+							<p> We got the feedback that too much was going on, so we simplified our design to two core functions: organize events or get help at event. Moreover, we realized that setting up "host event" option in community spaces needed a trust audit method so the event put up on QPL website is at least deemed safe to go to. We decided to push this functionality to V2.</p>
+						</div>
+					</div>
+					<br>
+					<p> <b>Mid Fidelity PIT </b> <br>Users validated our ideas, but were concerned that too much going on, and the goal of the <b>platform was unclear and confusing</b>, which was the biggest risk of our design. The idea that users found most compelling was "getting help at events", so instead of laying ourselves too thin, we decided to prioritize the journey of getting help before/after events, as a means of creating a community mutual aid-network, while enabling community participation, and iterated over the Mid-fidelity prototype on the design stage. </p>
 
-					<p>Our final low-fidelity prototype was a localized marketing toolkit, which allowed event organizers to find areas in which they want to focus on certain communities for events that they think will benefit those communities, and allowed local essential and non-essential businesses to sign up to promote an event, getting compensated in return. We decided to create a prototype of this based on the following observation:</p>
+					<h4>High-fidelity #1: </h4>
 
-					<p>Organizers are often not integrated in the communities they are aiming to reach, making it difficult to understand how to get these community members to actually attend these events. When organizers do try to tap into these communities and are somewhat successful, they often are only able to capture one specific demographic of the community and miss out on advertising their events to members of the community who would still benefit from these events, but are more difficult to get into contact with.</p>
+					<p><b>This platform allows Queens residents to get <b>assistance from their fellow community members</b> before or after an event held at the QPL. </b></p>
 
-					<p>Some of the questions and risks we identified relating to this localized marketing toolkit were: How will we get local businesses to use the app in the first place? How much compensation must we give to local businesses? How will we measure success in event recruitment by local businesses? How will we allow event participants to suggest their own events? How will we allow event participants to give feedback on events? We kept these questions in mind when moving forward with the prototyping stage and deciding on a single prototype.</p>
+					<img class="img-fluid" src=" ">
 
-					<p>Despite having four low-fidelity prototypes, we eventually decided to combine the events app with the tandem platform app as well as integrating the database of activity providers after getting feedback to do so, as there was co-existing synergy between getting help/offering help to the community and creating community participation in events.</p>
-
-					<h4>Mid-fidelity prototype [Design Prototype]:</h4>
-
-					<p>For our mid-fidelity prototypes, we tried to combine some of our ideas into an “events” platform. As you can see at the first page, for our mid-fidelity prototype, users could do multiple things, i.e. attend events (i.e. attend the events that QPL is already organizing), organize events (i.e. create own event using community space like the library), host events (i.e. community centers and businesses offer their space for events), and get help (i.e. users get help before/after an event from community members).</p>
-
-					<p>Feedback: There was too much going on, and the goal of the platform was unclear and confusing. Instead of laying ourselves too thin, we decided to prioritize the journey of getting help before/after events, as a means of creating a community mutual aid-network, while enabling community participation. We also got the feedback that the “JOIN” as a call to action was vague, and unclear.</p>
-
-					<h4>High-fidelity #1: [Design Prototype]</h4>
-
-					<p>This platform allows Queens residents to get assistance from their fellow community members before or after an event held at the QPL.</p>
-
-					<p>Feedback: While the interactions were intuitive, we learnt that users did not like reading the army of text, so we had to think about a succinct way of communicating the idea. Some users still had issues understanding what the platform was doing. We also learnt that “Get Help” and “Offer Help” did not sound sincere, and chose to pivot to “Find Buddy” and “Be Buddy” instead.</p>
+					<p>Feedback: While the interactions were intuitive, we learnt that users did not like reading the army of text, so we had to think about a succinct way of communicating the idea. Some users still had issues understanding what the platform was doing. We also learnt that “Get Help” and “Offer Help” did not sound sincere, and chose to pivot to “Find Buddy” and “Be Buddy” instead.We also got the feedback that the “JOIN” as a call to action was vague, and unclear.</p>
 
 					<h4>High-fidelity #2: after feedback! [Technical Prototype]</h4>
 
