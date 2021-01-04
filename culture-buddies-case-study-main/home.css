@@ -98,3 +98,11 @@ h1, h3, h5 {
   margin-bottom: 20px;
   text-transform: uppercase;
 }
+
+.pit-def {
+  font-family:'Libre Franklin', sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  color:#919191;
+  font-weight: bold;
+}
