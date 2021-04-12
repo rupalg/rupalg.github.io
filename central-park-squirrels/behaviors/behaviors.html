@@ -37,9 +37,9 @@
   </div><br>
 </div>
 
-<!-- <img src="map.jpeg" width="500px" style="z-index:-100"/> -->
-
 <div id="my_dataviz"></div>
+
+<img src="map.jpeg" width="500px" style="opacity:0.5; margin-top:-920px; margin-left:500px;"/>
 
 <!-- Load color palettes -->
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
@@ -63,7 +63,7 @@ $(document).ready(function(){
 // set the dimensions and margins of the graph
 var margin = {top: 80, right: 25, bottom: 30, left: 40},
   width = 500 - margin.left - margin.right,
-  height = 1200 - margin.top - margin.bottom;
+  height = 1000 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -161,13 +161,13 @@ function g(behavior) {
     .on("mouseleave", mouseleave)
 })
 
-svg.append("svg:image")
-.attr('x', 0)
-.attr('y', -150)
-.attr('width', 500)
-.attr('height', 1200)
-.attr('opacity', 0.5)
-.attr("xlink:href", "map.jpeg")
+// svg.append("svg:image")
+// .attr('x', 300)
+// .attr('y',-150)
+// .attr('width', 500)
+// .attr('height', 1200)
+// .attr('opacity', 0.5)
+// .attr("xlink:href", "map.jpeg")
 
 // Add title to graph
 svg.append("text")
