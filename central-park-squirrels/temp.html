@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <script src="https://d3js.org/d3.v4.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -18,6 +18,9 @@
 * { box-sizing:border-box;}
 body {
 
+}
+.tooltip {
+  position:absolute;
 }
 h1 {
 font-family:'Merriweather', times;
@@ -194,6 +197,7 @@ text-align: center;
       .append("div")
       .style("opacity", 0)
       .attr("class", "tooltip")
+      // .attr("position", "absolute")
       .style("background-color", "white")
       .style("border", "solid")
       .style("border-width", "2px")
@@ -209,12 +213,17 @@ text-align: center;
         .style("opacity", 1)
     }
     var mousemove = function(d) {
-  		if (d.value != 0) {
+  		// if (d.value != 0) {
       tooltip
         .html("Squirrels: " + d.value)
-        .style("left", (d3.mouse(this)[0]+10) + "px")
-        .style("top", (d3.mouse(this)[1]) + "px")
-  		}
+        // .style("left", (d3.mouse(this)[0]+10) + "px")
+        // .style("top", (d3.mouse(this)[1]) + "px")
+        // .attr("position", "absolute")
+        // .attr("x", d3.mouse(this)[0])
+        // .attr("y", d3.mouse(this)[1])
+        .style("left", (d3.mouse(this)[0]) + "px")
+      .style("top", (d3.mouse(this)[1] + 700) + "px")
+  		// }
     }
     var mouseleave = function(d) {
       tooltip
