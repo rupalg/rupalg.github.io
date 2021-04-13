@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<!-- Load color palettes -->
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+<script>
+// Squirrel data placeholder
+var sq_data;
+// set the dimensions and margins of the graph
+var margin = {top: 25, right: 25, bottom: 5, left: 40},
+  width = 500 - margin.left - margin.right,
+  height = 500 - margin.top - margin.bottom;
+
+var svg = d3.select("#my_test")
+.append("svg")
+  .attr("width", width + margin.left + margin.right)
+  .attr("height", height + margin.top + margin.bottom)
+.append("g")
+  .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")");
+
+//Read the data
+d3.csv("https://raw.githubusercontent.com/rupalg/rupalg.github.io/main/central-park-squirrels/nyc_squirrels.csv", function(data) {
+
+sq_data = data;
+
+var svg = d3.select("#my_test").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var sq = svg.append("circle")
+    .attr("id", "testCircle")
+    .attr("cx", 250)
+    .attr("cy", 175)
+    .style("stroke", "black")
+    .style("stroke-width", "3")
+    .attr("fill", "#fff1f0")
+    .attr("r", 150);
+
+  // create a tooltip
+  var tooltip = d3.select("#my_test")
+    .append("g")
+    .style("opacity", 0)
+    .attr("class", "tooltip")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "2px")
+    .style("border-radius", "5px")
+    .style("padding", "5px")
+
+  // Three function that change the tooltip when user hover / move / leave a cell
+  var mouseover = function(d) {
+    tooltip
+      console.log("check")
+      .style("opacity", 1)
+    d3.select(this)
+      .style("stroke", "black")
+      .style("opacity", 1)
+  }
+  var mousemove = function(d) {
+    tooltip
+      .html("The number of squirrels with this behavior is " + total)
+      .style("left", (d3.mouse(this)[0]+70) + "px")
+      .style("top", (d3.mouse(this)[1]) + "px");
+  }
+  var mouseleave = function(d) {
+    tooltip
+      .style("opacity", 0)
+    d3.select(this)
+      .style("stroke", "none")
+      .style("opacity", 0.8)
+  }
+})
+</script>
+
+<h1 style="font-family: Garamond, serif">Squirrel Activities </h1>
+<p style="font-family: Garamond, serif">Use this to filter between squirrel activities to see the percentage of squirrels perfomring each activity in Central Park! </p>
+
+<body>
+
+    <input type="checkbox" name="activity" value="running"> Running
+    <input type="checkbox" name="activity" value="chasing"> Chasing
+    <input type="checkbox" name="activity" value="climbing"> Climbing
+    <input type="checkbox" name="activity" value="eating"> Eating
+    <input type="checkbox" name="activity" value="foraging"> Foraging
+    <input type="checkbox" name="activity" value="other"> Other
+
+    <button id="btn" onclick="newUpdate()">Update</button>
+
+<div id="my_test"></div>
+<div id="num_squirrel"> </div>
+
+</body>
+
+    <!-- Button for choosing activities -->
+    <script> 
+    function getSelectedCheckboxValues(name) {
+    const checkboxes = document.querySelectorAll(`input[name="${name}"]:checked`);
+    let values = [];
+    checkboxes.forEach((checkbox) => {
+        values.push(checkbox.value);
+    });
+    return values;
+    }
+    var activities = [];
+
+    const btn = document.querySelector('#btn');
+    btn.addEventListener('click', (event) => {
+        activities = getSelectedCheckboxValues('activity');
+    });
+
+  function newUpdate(){
+    var total = 0;
+    activities = getSelectedCheckboxValues('activity');
+    d3.select("#testCircle")
+    .transition()
+    .delay(100)
+    .duration(2000)
+    .attr("fill", "#d76103")
+    .attr("r", function(){
+      console.log(activities)
+      console.log(sq_data)
+      var radius = 150;
+      for (i = 0; i < sq_data.length; i++) {  
+        for (j = 0; j < activities.length; j++) {
+          if(activities[j] == "foraging" && sq_data[i].foraging == "TRUE"){
+            total += 1;
+            break;
+          } else if(activities[j] == "eating" && sq_data[i].eating == "TRUE"){
+            total += 1;
+            break;
+          } else if(activities[j] == "climbing" && sq_data[i].climbing == "TRUE"){
+            total += 1;
+            break;
+          } else if(activities[j] == "running" && sq_data[i].running == "TRUE"){
+            total += 1;
+            break;
+          } else if(activities[j] == "chasing" && sq_data[i].chasing == "TRUE"){
+            total += 1;
+            break;
+          } else if(activities[j] == "other" && sq_data[i].chasing == "FALSE" && sq_data[i].running == "FALSE" && sq_data[i].climbing == "FALSE" && sq_data[i].eating == "FALSE" && sq_data[i].foraging == "FALSE"){
+            total += 1;
+            break;
+          }
+        }
+      }
+      radius = 150 * (total/3033)
+      console.log("Total: ", total);
+      console.log("The radius is: ", radius);
+      return radius;
+    });
+    percentage = Math.round((total/3032)*100);
+    d3.select("#num_squirrel").text("Number of Squirrels: "+total+" Percentage of total squirrels: "+percentage+"%");
+}
+
+    </script> 
+
+</html>
