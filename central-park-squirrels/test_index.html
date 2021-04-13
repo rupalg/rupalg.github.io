@@ -15,6 +15,27 @@
 	<p> the north section of Central Park, we began to notice some of the patterns that were reflected in the data sat we analyze in our project:</p>
 	<br>
 	<h3> <b> Squirrel Activity Heatmap </b> </h3>
+	
+	<!-- Create a div where the graph will take place -->
+
+<div class="container">
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Squirrel Behavior
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      <li role="presentation" id="all">All Squirrels</li>
+      <li role="presentation" id="eating">Eating</li>
+      <li role="presentation" id="chasing">Chasing</li>
+      <li role="presentation" id="climbing">Climbing</li>
+      <li role="presentation" id="foraging">Foraging</li>
+      <li role="presentation" id="running">Running</li>
+    </ul>
+  </div><br>
+</div>
+
+<div id="my_dataviz"></div>
+
+<img src="newmap.jpg" width="400px" style="opacity:0.5; margin-top:-1220px; margin-left:500px;"/>
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v4.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -60,27 +81,6 @@
     background-color:#ccc;
   }
   </style>
-
-<!-- Create a div where the graph will take place -->
-
-<div class="container">
-  <div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Squirrel Behavior
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-      <li role="presentation" id="all">All Squirrels</li>
-      <li role="presentation" id="eating">Eating</li>
-      <li role="presentation" id="chasing">Chasing</li>
-      <li role="presentation" id="climbing">Climbing</li>
-      <li role="presentation" id="foraging">Foraging</li>
-      <li role="presentation" id="running">Running</li>
-    </ul>
-  </div><br>
-</div>
-
-<div id="my_dataviz"></div>
-
-<img src="newmap.jpg" width="400px" style="opacity:0.5; margin-top:-1220px; margin-left:500px;"/>
 
 <!-- Load color palettes -->
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
