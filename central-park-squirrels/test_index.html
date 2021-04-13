@@ -64,14 +64,14 @@
 		
 <h3> <b> Squirrel Behavior Interactive Visualization </b> </h3>
 	<br>
-	<p> This is still placeholder text!!!!! </p>
+	<p> This is still placeholder text this time checking buttons again!!!!! </p>
 <br>
 <input type="radio" name="behavior" value="approaches"> Approaches
     <input type="radio" name="behavior" value="runs_from"> Runs Away
     <input type="radio" name="behavior" value="indifferent"> Indifferent
     <input type="radio" name="behavior" value="other"> Other
 
-    <button id="btn1" onclick="newUpdate()">Update</button>
+    <button id="btn1" onclick="newUpdate1()">Update</button>
 
 <div id="vis_2"></div>
 <div id="num_squirrel1"> </div>
@@ -352,7 +352,7 @@ var sq = svg.append("circle")
         behaviors = getSelectedCheckboxValues('behaviors');
     });
 
-  function newUpdate(){
+  function newUpdate1(){
     var total = 0;
     behaviors = getSelectedCheckboxValues('behavior');
     d3.select("#testCircle1")
