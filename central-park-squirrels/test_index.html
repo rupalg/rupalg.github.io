@@ -64,7 +64,7 @@
 		
 <h3> <b> Squirrel Behavior Interactive Visualization </b> </h3>
 	<br>
-	<p> This is still placeholder text this time checking buttons again!!!!! </p>
+	<p> This is still placeholder text this time checking buttons once more!!!!! </p>
 <br>
 <input type="radio" name="behavior" value="approaches"> Approaches
     <input type="radio" name="behavior" value="runs_from"> Runs Away
@@ -128,7 +128,7 @@
 
 
 
-<!-- Script for Activity Circle Vis -->
+<!-----------------------------------------Script for Activity Circle Vis ----------------------------------------------->
 <script>
 // Squirrel data placeholder
 var sq_data;
@@ -202,7 +202,7 @@ var sq = svg.append("circle")
 <!-- Button for choosing activities -->
     <script> 
     function getSelectedCheckboxValues(name) {
-    const checkboxes = document.querySelectorAll(`input[name="${name}"]:checked`);
+    const checkboxes = document.querySelectorAll(`input[name="activity"]:checked`);
     let values = [];
     checkboxes.forEach((checkbox) => {
         values.push(checkbox.value);
@@ -263,7 +263,7 @@ var sq = svg.append("circle")
 </script> 
 <!-- End of Scripts -->
 
-<!-- Scripts for Behavior Circle Vis, very similar to the Activity Circle -->
+<!----------------------------- Scripts for Behavior Circle Vis, very similar to the Activity Circle ---------------------------------->
 <script>
 // Squirrel data placeholder
 var sq_data;
@@ -342,7 +342,6 @@ var sq = svg.append("circle")
     checkboxes.forEach((radio) => {
         values.push(radio.value);
     });
-    console.log(values)
     return values;
     }
     var behaviors = [];
@@ -354,7 +353,7 @@ var sq = svg.append("circle")
 
   function newUpdate1(){
     var total = 0;
-    behaviors = getSelectedCheckboxValues('behavior');
+    behaviors = getSelectedCheckboxValues('behaviors');
     d3.select("#testCircle1")
     .transition()
     .delay(100)
