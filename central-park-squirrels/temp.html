@@ -20,6 +20,13 @@ font-family:'Merriweather', times;
 font-weight:bold;
 text-align: center;
 }
+.section {
+  margin:auto;
+}
+#cover {
+  height:100px;
+  object-fit:cover;
+}
 </style>
 
 </head>
@@ -27,24 +34,23 @@ text-align: center;
   <div class="container-fluid">
 
 
-  <div class="section">
 
 <div class="row">
 <div class="card">
     <div class="card-img col-md-12">
-      <img src="photos/cover.JPG" width="100%" />
+      <img src="photos/cover.JPG" width="100%" id="cover"/>
     </div>
 </div>
 </div>
 
     <h1>The Nuttiest Question: Squirrels in Central Park</h1>
 
-      <div class="card">
+      <div class="card col-md-8 section">
 
     <div class="row no-gutters">
-      <div class="col-md-4"><img src="photos/squirrel.jpeg" width="300px" id="cover"/></div>
+      <div class="col-md-4"><img src="photos/squirrel.jpeg" width="100px" class="card-img"/></div>
 
-        <div class="col-md-8" style="padding:10px;">
+        <div class="col-md-8 card-body">
           <p>
             <b>Hypothesis:</b> We hypothesize that squirrels in Central Park have different behaviors (running vs eating vs approaching people) depending on their location. In other words, there exists a difference in uptown v.s. downtown squirrels.
 
@@ -59,10 +65,27 @@ text-align: center;
   </div>
 </div>
 
+<div class="row">
+  <div class="col-md-8 section">
+    <h1>
+      Questions
+    </h1>
+
+    <p>
+      Are there any significant differences in squirrel activity across the different areas of central park?
+    </p>
+    <p>
+      Are there any significant differences in squirrel activity by squirrel age or color across different areas of central park?
+    </p>
+    <p>
+      Is there greater/lesser squirrel activity close to landmarks in Central Park?
+    </p>
+  </div>
+</div>
+
   </div>
 
 
-  </div>
 
 </body>
 </html>
