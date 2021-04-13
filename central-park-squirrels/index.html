@@ -8,14 +8,14 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-		
+
 	<div class="header">
 	<h1> <span style="color:#fcba03"> Squirrels </span> in Central Park: The <span style="color:#fcba03"> Nuttiest </span> Question</h1>
 	<h2> By: David Rosado <br> Rupal Gupta <br> Caroline Mao </h2>
 	</div>
 	<br>
 	<br>
-	<h3> <b> Testing out Humble Beginnings? </b> </h3> <br> 
+	<h3> <b> Testing out Humble Beginnings? </b> </h3> <br>
 	<p> Our journey through Central Park on April 3rd had one critical goal: <b><i> Find and take photos of as many squirrels as possible </b></i> <br> </p>
 	<p> Our project was inspired and based on the data collected by New York volunteers through the<a href= "https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-10-29">2018 Squirrel Census</a>,which sought to <br> </p>
 	<p> take inventory of the total squirrel population of New York's own Central Park. As we carried out our 2 hour walkthrough of </p>
@@ -24,25 +24,28 @@
 	</body>
 </html>
   <style type="text/css">
+	.tooltip {
+	  position:absolute;
+	}
   .header {
     padding: 60px;
-    text-align: center;	  
+    text-align: center;
     background: #1abc9c;
     color: white;
   }
   h1{
     text-align:center;
     font-size: 600%;
-    font-family: Georgia, serif;  
+    font-family: Georgia, serif;
   }
   h2{
     text-align:center;
     font-size: 300%;
-    font-family: Georgia, serif;  
+    font-family: Georgia, serif;
   h3{
     text-align:left;
     font-size: 250%;
-    font-family: Georgia, serif; 
+    font-family: Georgia, serif;
   }
   p{
     text-align:left;
@@ -175,12 +178,12 @@ function g(behavior, max) {
   }
   var mousemove = function(d) {
 		if (d.value != 0) {
-    tooltip
-      .html("Squirrels: " + d.value)
-      .style("left", (d3.mouse(this)[0]+10) + "px")
-      .style("top", (d3.mouse(this)[1]) + "px")
+		tooltip
+			.html("Squirrels: " + d.value)
+			.style("left", (d3.mouse(this)[0]) + "px")
+		.style("top", (d3.mouse(this)[1] + 900) + "px")
 		}
-  }
+	}
   var mouseleave = function(d) {
     tooltip
       .style("opacity", 0)

@@ -213,17 +213,12 @@ text-align: center;
         .style("opacity", 1)
     }
     var mousemove = function(d) {
-  		// if (d.value != 0) {
+  		if (d.value != 0) {
       tooltip
         .html("Squirrels: " + d.value)
-        // .style("left", (d3.mouse(this)[0]+10) + "px")
-        // .style("top", (d3.mouse(this)[1]) + "px")
-        // .attr("position", "absolute")
-        // .attr("x", d3.mouse(this)[0])
-        // .attr("y", d3.mouse(this)[1])
         .style("left", (d3.mouse(this)[0]) + "px")
       .style("top", (d3.mouse(this)[1] + 700) + "px")
-  		// }
+  		}
     }
     var mouseleave = function(d) {
       tooltip
