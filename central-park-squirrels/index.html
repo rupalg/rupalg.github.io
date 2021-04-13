@@ -5,7 +5,6 @@
 <meta charset="utf-8">
 
 	<h1>Central Park Squirrels</h1>
-	<p>My first paragraph.</p>
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v4.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -133,10 +132,12 @@ function g(behavior) {
       .style("opacity", 1)
   }
   var mousemove = function(d) {
+		if (d.value != 0) {
     tooltip
-      .html("The exact value of<br>this cell is: " + d.value)
-      .style("left", (d3.mouse(this)[0]+70) + "px")
+      .html("Squirrels: " + d.value)
+      .style("left", (d3.mouse(this)[0]+10) + "px")
       .style("top", (d3.mouse(this)[1]) + "px")
+		}
   }
   var mouseleave = function(d) {
     tooltip
