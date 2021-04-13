@@ -27,10 +27,6 @@ var svg = d3.select("#my_test")
 d3.csv("https://raw.githubusercontent.com/rupalg/rupalg.github.io/main/central-park-squirrels/nyc_squirrels.csv", function(data) {
 
 sq_data = data;
-  // Build color scale
-var myColor = d3.scaleSequential()
-    .interpolator(d3.interpolateGreens)
-    .domain([1,3023])
 
 var svg = d3.select("#my_test").append("svg")
     .attr("width", width)
@@ -44,9 +40,6 @@ var sq = svg.append("circle")
     .style("stroke-width", "3")
     .attr("fill", "#fff1f0")
     .attr("r", 150);
-
-// var text = d3.select("#num_squirrel").append("none")
-   
 
   // create a tooltip
   var tooltip = d3.select("#my_test")
@@ -88,7 +81,6 @@ var sq = svg.append("circle")
 <p style="font-family: Garamond, serif">Use this to filter between squirrel activities to see the percentage of squirrels perfomring each activity in Central Park! </p>
 
 <body>
-<!-- Create a div where the graph will take place -->
 
     <input type="checkbox" name="activity" value="running"> Running
     <input type="checkbox" name="activity" value="chasing"> Chasing
@@ -99,8 +91,7 @@ var sq = svg.append("circle")
 
     <button id="btn" onclick="newUpdate()">Update</button>
 
-    <div id="my_test"></div>
-    <div id="num_squirrel"> </div>
+<div id="my_test"></div>
 
 </body>
 
@@ -156,15 +147,11 @@ var sq = svg.append("circle")
           }
         }
       }
-      //radius =(total/3033)*100
-      //console.log("Total: ", total);
-      //console.log("The radius is: ", radius);
+      radius = 150 * (total/3033)
+      console.log("Total: ", total);
+      console.log("The radius is: ", radius);
       return radius;
     });
-    // console.log("Total: ", total);
-    percentage = Math.round((total/3032)*100);
-    // console.log(percentage)
-    d3.select("#num_squirrel").text("Number of Squirrels: "+total+" Percentage of total squirrels: "+percentage+"%")
 }
 
     </script> 
