@@ -1,13 +1,19 @@
 <!-- Code from d3-graph-gallery.com -->
 <!DOCTYPE html>
+<html>
+	<body>
 <meta charset="utf-8">
 
+	<h1>Central Park Squirrels</h1>
+	<p>My first paragraph.</p>
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v4.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+	</body>
+</html>
   <style type="text/css">
   .dropdown, .dropdown-menu li {
     padding:10px;
@@ -39,7 +45,11 @@
 
 <div id="my_dataviz"></div>
 
+<<<<<<< HEAD
 <img src="map.jpeg" width="500px" style="opacity:0.5; margin-top:-1220px; margin-left:500px;"/>
+=======
+<img src="newmap.jpg" width="400px" style="opacity:0.5; margin-top:-1220px; margin-left:500px;"/>
+>>>>>>> 3c3174ac74e6324c4193815076e2b79138d29bf8
 
 <!-- Load color palettes -->
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
@@ -61,8 +71,8 @@ $(document).ready(function(){
 
 // set the dimensions and margins of the graph
 var margin = {top: 80, right: 25, bottom: 30, left: 40},
-  width = 500 - margin.left - margin.right,
-  height = 1300 - margin.top - margin.bottom;
+  width = 510 - margin.left - margin.right,
+  height = 1270 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -105,7 +115,7 @@ function g(behavior) {
   // Build color scale
   var myColor = d3.scaleSequential()
     .interpolator(d3.interpolateGreens)
-    .domain([1,32])
+    .domain([0,32])
 
   // create a tooltip
   var tooltip = d3.select("#my_dataviz")

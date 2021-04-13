@@ -7,6 +7,8 @@
 <!-- Load color palettes -->
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
 <script>
 // Squirrel data placeholder
 var sq_data;
@@ -77,81 +79,69 @@ var sq = svg.append("circle")
 })
 </script>
 
-<h1 style="font-family: Garamond, serif">Squirrel Activities </h1>
-<p style="font-family: Garamond, serif">Use this to filter between squirrel activities to see the percentage of squirrels perfomring each activity in Central Park! </p>
+<h1 style="font-family: Garamond, serif">Squirrel Behaviors </h1>
 
 <body>
 
-    <input type="checkbox" name="activity" value="running"> Running
-    <input type="checkbox" name="activity" value="chasing"> Chasing
-    <input type="checkbox" name="activity" value="climbing"> Climbing
-    <input type="checkbox" name="activity" value="eating"> Eating
-    <input type="checkbox" name="activity" value="foraging"> Foraging
-    <input type="checkbox" name="activity" value="other"> Other
+    <input type="radio" name="behavior" value="approaches"> Approaches
+    <input type="radio" name="behavior" value="runs_from"> Runs Away
+    <input type="radio" name="behavior" value="indifferent"> Indifferent
+    <input type="radio" name="behavior" value="other"> Other
 
     <button id="btn" onclick="newUpdate()">Update</button>
 
 <div id="my_test"></div>
+<div id="num_squirrel"> </div>
 
 </body>
 
     <!-- Button for choosing activities -->
     <script> 
     function getSelectedCheckboxValues(name) {
-    const checkboxes = document.querySelectorAll(`input[name="${name}"]:checked`);
+    const checkboxes = document.querySelectorAll(`input[name="behavior"]:checked`);
     let values = [];
-    checkboxes.forEach((checkbox) => {
-        values.push(checkbox.value);
+    checkboxes.forEach((radio) => {
+        values.push(radio.value);
     });
+    console.log(values)
     return values;
     }
-    var activities = [];
+    var behaviors = [];
 
     const btn = document.querySelector('#btn');
     btn.addEventListener('click', (event) => {
-        activities = getSelectedCheckboxValues('activity');
+        behaviors = getSelectedCheckboxValues('behaviors');
     });
 
   function newUpdate(){
     var total = 0;
-    activities = getSelectedCheckboxValues('activity');
+    behaviors = getSelectedCheckboxValues('behavior');
     d3.select("#testCircle")
     .transition()
     .delay(100)
     .duration(2000)
     .attr("fill", "#d76103")
     .attr("r", function(){
-      console.log(activities)
-      console.log(sq_data)
       var radius = 150;
       for (i = 0; i < sq_data.length; i++) {  
-        for (j = 0; j < activities.length; j++) {
-          if(activities[j] == "foraging" && sq_data[i].foraging == "TRUE"){
+        if(behaviors[0] == "approaches" && sq_data[i].approaches == "TRUE"){
+          total += 1;
+        } else if(behaviors[0] == "runs_from" && sq_data[i].runs_from == "TRUE"){
+          total += 1;
+        } else if(behaviors[0] == "indifferent" && sq_data[i].indifferent == "TRUE"){
+          total += 1;
+        } else if(behaviors[0] == "other" && sq_data[i].approaches == "FALSE" && sq_data[i].runs_from == "FALSE" && sq_data[i].indifferent == "FALSE"){
             total += 1;
-            break;
-          } else if(activities[j] == "eating" && sq_data[i].eating == "TRUE"){
-            total += 1;
-            break;
-          } else if(activities[j] == "climbing" && sq_data[i].climbing == "TRUE"){
-            total += 1;
-            break;
-          } else if(activities[j] == "running" && sq_data[i].running == "TRUE"){
-            total += 1;
-            break;
-          } else if(activities[j] == "chasing" && sq_data[i].chasing == "TRUE"){
-            total += 1;
-            break;
-          } else if(activities[j] == "other" && sq_data[i].chasing == "FALSE" && sq_data[i].running == "FALSE" && sq_data[i].climbing == "FALSE" && sq_data[i].eating == "FALSE" && sq_data[i].foraging == "FALSE"){
-            total += 1;
-            break;
           }
         }
-      }
       radius = 150 * (total/3033)
       console.log("Total: ", total);
       console.log("The radius is: ", radius);
       return radius;
     });
+
+    percentage = Math.round((total/3032)*100);
+    d3.select("#num_squirrel").text("Number of Squirrels: "+total+" Percentage of total squirrels: "+percentage+"%")
 }
 
     </script> 

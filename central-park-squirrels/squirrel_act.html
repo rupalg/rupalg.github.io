@@ -92,6 +92,7 @@ var sq = svg.append("circle")
     <button id="btn" onclick="newUpdate()">Update</button>
 
 <div id="my_test"></div>
+<div id="num_squirrel"> </div>
 
 </body>
 
@@ -152,6 +153,8 @@ var sq = svg.append("circle")
       console.log("The radius is: ", radius);
       return radius;
     });
+    percentage = Math.round((total/3032)*100);
+    d3.select("#num_squirrel").text("Number of Squirrels: "+total+" Percentage of total squirrels: "+percentage+"%");
 }
 
     </script> 
