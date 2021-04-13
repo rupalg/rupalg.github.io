@@ -3,24 +3,23 @@
 <html>
 	<body>
 <meta charset="utf-8">
+	<!-- Load d3.js -->
+	<script src="https://d3js.org/d3.v4.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		
 	<div class="header">
 	<h1> <span style="color:#fcba03"> Squirrels </span> in Central Park: The <span style="color:#fcba03"> Nuttiest </span> Question</h1>
 	<h2> By: David Rosado <br> Rupal Gupta <br> Caroline Mao </h2>
 	</div>
 	<br>
 	<br>
-	<h3> <b> Humble Beginnings </b> </h3>
+	<h3> <b> Testing out Humble Beginnings? </b> </h3> <br> 
 	<p> Our journey through Central Park on April 3rd had one critical goal: <b><i> Find and take photos of as many squirrels as possible </b></i> <br> </p>
-	<p> Our project was inspired and based on the data collected by New York volunteers through the 
-	<a href= "https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-10-29"> 2018 Squirrel Census </a>, which sought to <br> </p>
+	<p> Our project was inspired and based on the data collected by New York volunteers through the<a href= "https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-10-29">2018 Squirrel Census</a>,which sought to <br> </p>
 	<p> take inventory of the total squirrel population of New York's own Central Park. As we carried out our 2 hour walkthrough of </p>
 	<p> the north section of Central Park, we began to notice some of the patterns that were reflected in the data sat we analyze in our project:</p>
-
-<!-- Load d3.js -->
-<script src="https://d3js.org/d3.v4.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 	</body>
 </html>
@@ -44,7 +43,6 @@
     text-align:left;
     font-size: 250%;
     font-family: Georgia, serif; 
-    text-decoration: underline;
   }
   p{
     text-align:left;
@@ -53,7 +51,7 @@
   }
   a{
     text-align:left;
-    font-size: 200%;
+    font-size:150%;
     font-family: Georgia, serif;
   }
   .dropdown, .dropdown-menu li {
@@ -103,7 +101,7 @@ var running = document.getElementById("running")
 $(document).ready(function(){
   $(".dropdown-toggle").dropdown();
   e.stopPropagation();
-   e.preventDefault();
+  e.preventDefault();
 });
 
 // set the dimensions and margins of the graph
@@ -217,7 +215,7 @@ svg.append("text")
         .attr("y", -50)
         .attr("text-anchor", "left")
         .style("font-size", "22px")
-        .text("Squirrels in Central Park");
+        .text("Heatmap of Squirrel Activity in Central Park");
       }
 
 

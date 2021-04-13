@@ -1,0 +1,448 @@
+<!-- Code from d3-graph-gallery.com -->
+<!DOCTYPE html>
+<html>
+	<body>
+<meta charset="utf-8">
+	<div class="header">
+	<h1> <span style="color:#fcba03"> Squirrels </span> in Central Park: The <span style="color:#fcba03"> Nuttiest </span> Question</h1>
+	<h2> By: David Rosado <br> Rupal Gupta <br> Caroline Mao </h2>
+	</div>
+	<br>
+	<h3> <b>Humble Beginnings </b> </h3> <br> 
+	<p> Our journey through Central Park on April 3rd had one critical goal: <b><i> Find and take photos of as many squirrels as possible. </b></i> </p>
+	<p> Our project was inspired and based on the data collected by New York volunteers through the <a href= "https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-10-29">2018 Squirrel Census</a>, which sought to <br> </p>
+	<p> take inventory of the total squirrel population of New York's own Central Park. As we carried out our 2 hour walkthrough of </p>
+	<p> the north section of Central Park, we began to notice some of the patterns that were reflected in the data sat we analyze in our project:</p>
+	<br>
+	<h3> <b> Squirrel Activity Heatmap </b> </h3>
+	<br>
+	<p> This collection of heatmaps accomplishes 2 main goals. The first is to showcase the general location <br>
+	    of squirrels within the park, as shown in the default presented heatmap. This is allows to see where squirrels <br>
+	    can and can't be found <i> (Squirrels don't seem to enjoy swimming or the Delacorte Theatre that much!)</i>. <br>
+	    The second is to show concentration of different squirrel activities throughout the park, specifically <b>running, <br>
+	    chasing, foraging, eating and climbing</b>. </p> <br>
+	
+	<!-- Create a div where the graph will take place -->
+
+<div class="container">
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Squirrel Behavior
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      <li role="presentation" id="all">All Squirrels</li>
+      <li role="presentation" id="eating">Eating</li>
+      <li role="presentation" id="chasing">Chasing</li>
+      <li role="presentation" id="climbing">Climbing</li>
+      <li role="presentation" id="foraging">Foraging</li>
+      <li role="presentation" id="running">Running</li>
+    </ul>
+  </div><br>
+</div>
+
+<div id="my_dataviz"></div>
+
+<img src="newmap.jpg" width="400px" style="opacity:0.5; margin-top:-1220px; margin-left:500px;"/>
+
+<div>
+<h3> <b> Squirrel Activity Interactive Visualization </b> </h3>
+	<br>
+	<p> This interactive visualization allows us to select 1 or more squirrel activities <i>(as they were denoted above)</i> </p> <br>
+	<p> and see the exact number of squirrels who carried out said activities, as well as the relative ratio in comparison </p> 
+	<p> to the total number of squirrels. </p>
+</div>
+<input type="checkbox" name="activity" value="running"> Running
+    <input type="checkbox" name="activity" value="chasing"> Chasing
+    <input type="checkbox" name="activity" value="climbing"> Climbing
+    <input type="checkbox" name="activity" value="eating"> Eating
+    <input type="checkbox" name="activity" value="foraging"> Foraging
+    <input type="checkbox" name="activity" value="other"> Other
+
+    <button id="btn" onclick="newUpdate()">Update</button>
+
+<div id="my_test"></div>
+<div id="num_squirrel"> </div>
+		
+<h3> <b> Squirrel Behavior Interactive Visualization </b> </h3>
+	<br>
+	<p> This is placeholder text!!!!! </p>
+		
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	</body>
+</html>
+  <style type="text/css">
+  .header {
+    padding: 60px;
+    text-align: center;	  
+    background: #1abc9c;
+    color: white;
+  }
+  h1{
+    text-align:center;
+    font-size: 600%;
+    font-family: Georgia, serif;  
+  }
+  h2{
+    text-align:center;
+    font-size: 300%;
+    font-family: Georgia, serif;  
+  }
+  h3{
+    text-align:left;
+    font-size: 250%;
+    font-family: Georgia, serif; 
+  }
+  p{
+    text-align:left;
+    font-size: 200%;
+    font-family: Georgia, serif;
+  }
+  .dropdown, .dropdown-menu li {
+    padding:10px;
+  }
+  .dropdown-menu li {
+    transition:all 0.3s ease;
+  }
+  .dropdown-menu li:hover {
+    background-color:#ccc;
+  }
+  </style>
+
+<!-- Load color palettes -->
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+
+
+
+<!-- Script for Activity Circle Vis -->
+<script>
+// Squirrel data placeholder
+var sq_data;
+// set the dimensions and margins of the graph
+var margin = {top: 25, right: 25, bottom: 5, left: 40},
+  width = 500 - margin.left - margin.right,
+  height = 500 - margin.top - margin.bottom;
+
+var svg = d3.select("#my_test")
+.append("svg")
+  .attr("width", width + margin.left + margin.right)
+  .attr("height", height + margin.top + margin.bottom)
+.append("g")
+  .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")");
+
+//Read the data
+d3.csv("https://raw.githubusercontent.com/rupalg/rupalg.github.io/main/central-park-squirrels/nyc_squirrels.csv", function(data) {
+
+sq_data = data;
+
+var svg = d3.select("#my_test").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var sq = svg.append("circle")
+    .attr("id", "testCircle")
+    .attr("cx", 250)
+    .attr("cy", 175)
+    .style("stroke", "black")
+    .style("stroke-width", "3")
+    .attr("fill", "#fff1f0")
+    .attr("r", 150);
+
+  // create a tooltip
+  var tooltip = d3.select("#my_test")
+    .append("g")
+    .style("opacity", 0)
+    .attr("class", "tooltip")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "2px")
+    .style("border-radius", "5px")
+    .style("padding", "5px")
+
+  // Three function that change the tooltip when user hover / move / leave a cell
+  var mouseover = function(d) {
+    tooltip
+      console.log("check")
+      .style("opacity", 1)
+    d3.select(this)
+      .style("stroke", "black")
+      .style("opacity", 1)
+  }
+  var mousemove = function(d) {
+    tooltip
+      .html("The number of squirrels with this behavior is " + total)
+      .style("left", (d3.mouse(this)[0]+70) + "px")
+      .style("top", (d3.mouse(this)[1]) + "px");
+  }
+  var mouseleave = function(d) {
+    tooltip
+      .style("opacity", 0)
+    d3.select(this)
+      .style("stroke", "none")
+      .style("opacity", 0.8)
+  }
+})
+</script>
+
+<!-- Button for choosing activities -->
+    <script> 
+    function getSelectedCheckboxValues(name) {
+    const checkboxes = document.querySelectorAll(`input[name="${name}"]:checked`);
+    let values = [];
+    checkboxes.forEach((checkbox) => {
+        values.push(checkbox.value);
+    });
+    return values;
+    }
+    var activities = [];
+
+    const btn = document.querySelector('#btn');
+    btn.addEventListener('click', (event) => {
+        activities = getSelectedCheckboxValues('activity');
+    });
+
+  function newUpdate(){
+    var total = 0;
+    activities = getSelectedCheckboxValues('activity');
+    d3.select("#testCircle")
+    .transition()
+    .delay(100)
+    .duration(2000)
+    .attr("fill", "#d76103")
+    .attr("r", function(){
+      console.log(activities)
+      console.log(sq_data)
+      var radius = 150;
+      for (i = 0; i < sq_data.length; i++) {  
+        for (j = 0; j < activities.length; j++) {
+          if(activities[j] == "foraging" && sq_data[i].foraging == "TRUE"){
+            total += 1;
+            break;
+          } else if(activities[j] == "eating" && sq_data[i].eating == "TRUE"){
+            total += 1;
+            break;
+          } else if(activities[j] == "climbing" && sq_data[i].climbing == "TRUE"){
+            total += 1;
+            break;
+          } else if(activities[j] == "running" && sq_data[i].running == "TRUE"){
+            total += 1;
+            break;
+          } else if(activities[j] == "chasing" && sq_data[i].chasing == "TRUE"){
+            total += 1;
+            break;
+          } else if(activities[j] == "other" && sq_data[i].chasing == "FALSE" && sq_data[i].running == "FALSE" && sq_data[i].climbing == "FALSE" && sq_data[i].eating == "FALSE" && sq_data[i].foraging == "FALSE"){
+            total += 1;
+            break;
+          }
+        }
+      }
+      radius = 150 * (total/3033)
+      console.log("Total: ", total);
+      console.log("The radius is: ", radius);
+      return radius;
+    });
+    percentage = Math.round((total/3032)*100);
+    d3.select("#num_squirrel").text("Number of Squirrels: "+total+" Percentage of total squirrels: "+percentage+"%");
+}
+
+</script> 
+<!-- End of Scripts -->
+
+
+
+
+<script>
+var all = document.getElementById("all");
+var eating = document.getElementById("eating");
+var chasing = document.getElementById("chasing");
+var climbing = document.getElementById("climbing");
+var foraging = document.getElementById("foraging");
+var running = document.getElementById("running")
+
+$(document).ready(function(){
+  $(".dropdown-toggle").dropdown();
+  e.stopPropagation();
+   e.preventDefault();
+});
+
+// set the dimensions and margins of the graph
+var margin = {top: 80, right: 25, bottom: 30, left: 40},
+  width = 510 - margin.left - margin.right,
+  height = 1270 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select("#my_dataviz")
+.append("svg")
+  .attr("width", width + margin.left + margin.right)
+  .attr("height", height + margin.top + margin.bottom)
+.append("g")
+  .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")");
+
+//Read the data
+function g(behavior, max) {
+  d3.csv(behavior, function(data) {
+
+  // Labels of row and columns -> unique identifier of the column called 'group' and 'variable'
+  var myGroups = d3.map(data, function(d){return d.group;}).keys()
+  var myVars = d3.map(data, function(d){return d.variable;}).keys()
+
+  // Build X scales and axis:
+  var x = d3.scaleBand()
+    .range([ 0, width ])
+    .domain(myGroups)
+    .padding(0.05);
+  svg.append("g")
+    .style("font-size", 15)
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x).tickSize(0))
+    .select(".domain").remove()
+
+  // Build Y scales and axis:
+  var y = d3.scaleBand()
+    .range([ height, 0 ])
+    .domain(myVars)
+    .padding(0.05);
+  svg.append("g")
+    .style("font-size", 15)
+    .call(d3.axisLeft(y).tickSize(0))
+    .select(".domain").remove()
+
+// var max = d3.max(behavior, function(d) { return d.value; });
+
+  // Build color scale
+  var myColor = d3.scaleSequential()
+    .interpolator(d3.interpolateGreens)
+    .domain([0,max])
+
+  // create a tooltip
+  var tooltip = d3.select("#my_dataviz")
+    .append("div")
+    .style("opacity", 0)
+    .attr("class", "tooltip")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "2px")
+    .style("border-radius", "5px")
+    .style("padding", "5px")
+
+  // Three function that change the tooltip when user hover / move / leave a cell
+  var mouseover = function(d) {
+    tooltip
+      .style("opacity", 1)
+    d3.select(this)
+      .style("stroke", "black")
+      .style("opacity", 1)
+  }
+  var mousemove = function(d) {
+		if (d.value != 0) {
+    tooltip
+      .html("Squirrels: " + d.value)
+      .style("left", (d3.mouse(this)[0]+10) + "px")
+      .style("top", (d3.mouse(this)[1]) + "px")
+		}
+  }
+  var mouseleave = function(d) {
+    tooltip
+      .style("opacity", 0)
+    d3.select(this)
+      .style("stroke", "none")
+      .style("opacity", 0.8)
+  }
+
+  // add the squares
+  svg.selectAll()
+    .data(data, function(d) {return d.group+':'+d.variable;})
+    .enter()
+    .append("rect")
+      .attr("x", function(d) { return x(d.group) })
+      .attr("y", function(d) { return y(d.variable) })
+      .attr("rx", 4)
+      .attr("ry", 4)
+      .attr("width", x.bandwidth() )
+      .attr("height", y.bandwidth() )
+      .style("fill", function(d) { return myColor(d.value)} )
+      .style("stroke-width", 4)
+      .style("stroke", "none")
+      .style("opacity", 0.8)
+    .on("mouseover", mouseover)
+    .on("mousemove", mousemove)
+    .on("mouseleave", mouseleave)
+})
+
+// Add title to graph
+svg.append("text")
+        .attr("x", 0)
+        .attr("y", -1000)
+        .attr("text-anchor", "left")
+        .style("font-size", "12px")
+        .text("The domains used for the color gradients of the different activities are based on concentration of the particular activity relative to how common it is");
+      }
+
+  g("behaviors.csv", 32)
+  all.style.background = "#ccc";
+
+// dropdown options
+  all.addEventListener("click", function(){
+    g("behaviors.csv", 32)
+    all.style.background = "#ccc";
+    eating.style.background = "#fff";
+    chasing.style.background = "#fff";
+    climbing.style.background = "#fff";
+    foraging.style.background = "#fff";
+    running.style.background = "#fff";
+  });
+  eating.addEventListener("click", function(){
+    g("eating.csv", 21)
+    eating.style.background = "#ccc";
+    all.style.background = "#fff";
+    chasing.style.background = "#fff";
+    climbing.style.background = "#fff";
+    foraging.style.background = "#fff";
+    running.style.background = "#fff";
+  });
+  chasing.addEventListener("click", function(){
+    g("chasing.csv", 7)
+    all.style.background = "#fff";
+    eating.style.background = "#fff";
+    chasing.style.background = "#ccc";
+    climbing.style.background = "#fff";
+    foraging.style.background = "#fff";
+    running.style.background = "#fff";
+  });
+  climbing.addEventListener("click", function(){
+    g("climbing.csv", 10)
+    all.style.background = "#fff";
+    eating.style.background = "#fff";
+    chasing.style.background = "#fff";
+    climbing.style.background = "#ccc";
+    foraging.style.background = "#fff";
+    running.style.background = "#fff";
+  });
+  foraging.addEventListener("click", function(){
+    g("foraging.csv", 21)
+    all.style.background = "#fff";
+    eating.style.background = "#fff";
+    chasing.style.background = "#fff";
+    climbing.style.background = "#fff";
+    foraging.style.background = "#ccc";
+    running.style.background = "#fff";
+  });
+  running.addEventListener("click", function(){
+    g("running.csv", 13)
+    all.style.background = "#fff";
+    eating.style.background = "#fff";
+    chasing.style.background = "#fff";
+    climbing.style.background = "#fff";
+    foraging.style.background = "#fff";
+    running.style.background = "#ccc";
+  });
+
+
+
+</script>
