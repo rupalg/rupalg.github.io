@@ -71,7 +71,7 @@
     <input type="radio" name="behavior" value="indifferent"> Indifferent
     <input type="radio" name="behavior" value="other"> Other
 
-    <button id="btn" onclick="newUpdate()">Update</button>
+    <button id="btn1" onclick="newUpdate()">Update</button>
 
 <div id="vis_2"></div>
 <div id="num_squirrel1"> </div>
@@ -347,8 +347,8 @@ var sq = svg.append("circle")
     }
     var behaviors = [];
 
-    const btn = document.querySelector('#btn');
-    btn.addEventListener('click', (event) => {
+    const btn1 = document.querySelector('#btn1');
+    btn1.addEventListener('click', (event) => {
         behaviors = getSelectedCheckboxValues('behaviors');
     });
 
