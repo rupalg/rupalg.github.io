@@ -45,6 +45,9 @@ var sq = svg.append("circle")
     .attr("fill", "#fff1f0")
     .attr("r", 150);
 
+// var text = d3.select("#num_squirrel").append("none")
+   
+
   // create a tooltip
   var tooltip = d3.select("#my_test")
     .append("g")
@@ -96,7 +99,8 @@ var sq = svg.append("circle")
 
     <button id="btn" onclick="newUpdate()">Update</button>
 
-<div id="my_test"></div>
+    <div id="my_test"></div>
+    <div id="num_squirrel"> </div>
 
 </body>
 
@@ -152,11 +156,15 @@ var sq = svg.append("circle")
           }
         }
       }
-      radius = 150 * (total/3033)
-      console.log("Total: ", total);
-      console.log("The radius is: ", radius);
+      //radius =(total/3033)*100
+      //console.log("Total: ", total);
+      //console.log("The radius is: ", radius);
       return radius;
     });
+    // console.log("Total: ", total);
+    percentage = Math.round((total/3032)*100);
+    // console.log(percentage)
+    d3.select("#num_squirrel").text("Number of Squirrels: "+total+" Percentage of total squirrels: "+percentage+"%")
 }
 
     </script> 
