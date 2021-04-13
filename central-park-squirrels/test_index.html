@@ -8,7 +8,7 @@
 	<h2> By: David Rosado <br> Rupal Gupta <br> Caroline Mao </h2>
 	</div>
 	<br>
-	<h3> <b>Humble Beginnings </b> </h3> <br> 
+	<h3> <b>Humble Beginnings </b> </h3> <br>
 	<p> Our journey through Central Park on April 3rd had one critical goal: <b><i> Find and take photos of as many squirrels as possible. </b></i> </p>
 	<p> Our project was inspired and based on the data collected by New York volunteers through the <a href= "https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-10-29">2018 Squirrel Census</a>, which sought to <br> </p>
 	<p> take inventory of the total squirrel population of New York's own Central Park. As we carried out our 2 hour walkthrough of </p>
@@ -21,7 +21,7 @@
 	    can and can't be found <i> (Squirrels don't seem to enjoy swimming or the Delacorte Theatre that much!)</i>. <br>
 	    The second is to show concentration of different squirrel activities throughout the park, specifically <b>running, <br>
 	    chasing, foraging, eating and climbing</b>. </p> <br>
-	
+
 	<!-- Create a div where the graph will take place -->
 
 <div class="container">
@@ -46,8 +46,8 @@
 <div>
 <h3> <b> Squirrel Activity Interactive Visualization </b> </h3>
 	<br>
-	<p> This interactive visualization allows us to select 1 or more squirrel activities <i>(as they were denoted above)</i> </p> 
-	<p> and see the exact number of squirrels who carried out said activities, as well as the relative ratio in comparison </p> 
+	<p> This interactive visualization allows us to select 1 or more squirrel activities <i>(as they were denoted above)</i> </p>
+	<p> and see the exact number of squirrels who carried out said activities, as well as the relative ratio in comparison </p>
 	<p> to the total number of squirrels. </p>
 </div>
 <input type="checkbox" name="activity" value="running"> Running
@@ -61,7 +61,7 @@
 
 <div id="my_test"></div>
 <div id="num_squirrel"> </div>
-		
+
 <h3> <b> Squirrel Behavior Interactive Visualization </b> </h3>
 	<br>
 	<p> This is still placeholder text this time checking buttons once more!!!!! </p>
@@ -75,7 +75,7 @@
 
 <div id="vis_2"></div>
 <div id="num_squirrel1"> </div>
-		
+
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v4.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -85,26 +85,29 @@
 	</body>
 </html>
   <style type="text/css">
+	.tooltip {
+	  position:absolute;
+	}
   .header {
     padding: 60px;
-    text-align: center;	  
+    text-align: center;
     background: #1abc9c;
     color: white;
   }
   h1{
     text-align:center;
     font-size: 600%;
-    font-family: Georgia, serif;  
+    font-family: Georgia, serif;
   }
   h2{
     text-align:center;
     font-size: 300%;
-    font-family: Georgia, serif;  
+    font-family: Georgia, serif;
   }
   h3{
     text-align:left;
     font-size: 250%;
-    font-family: Georgia, serif; 
+    font-family: Georgia, serif;
   }
   p{
     text-align:left;
@@ -200,7 +203,7 @@ var sq = svg.append("circle")
 </script>
 
 <!-- Button for choosing activities -->
-    <script> 
+    <script>
     function getSelectedCheckboxValues(name) {
     const checkboxes = document.querySelectorAll(`input[name="activity"]:checked`);
     let values = [];
@@ -228,7 +231,7 @@ var sq = svg.append("circle")
       console.log(activities)
       console.log(sq_data)
       var radius = 150;
-      for (i = 0; i < sq_data.length; i++) {  
+      for (i = 0; i < sq_data.length; i++) {
         for (j = 0; j < activities.length; j++) {
           if(activities[j] == "foraging" && sq_data[i].foraging == "TRUE"){
             total += 1;
@@ -260,7 +263,7 @@ var sq = svg.append("circle")
     d3.select("#num_squirrel").text("Number of Squirrels: "+total+" Percentage of total squirrels: "+percentage+"%");
 }
 
-</script> 
+</script>
 <!-- End of Scripts -->
 
 <!----------------------------- Scripts for Behavior Circle Vis, very similar to the Activity Circle ---------------------------------->
@@ -319,10 +322,12 @@ var sq = svg.append("circle")
       .style("opacity", 1)
   }
   var mousemove = function(d) {
-    tooltip
-      .html("The number of squirrels with this behavior is " + total)
-      .style("left", (d3.mouse(this)[0]+70) + "px")
-      .style("top", (d3.mouse(this)[1]) + "px");
+		if (d.value != 0) {
+		tooltip
+			.html("Squirrels: " + d.value)
+			.style("left", (d3.mouse(this)[0]) + "px")
+		.style("top", (d3.mouse(this)[1] + 900) + "px")
+		}
   }
   var mouseleave = function(d) {
     tooltip
@@ -335,7 +340,7 @@ var sq = svg.append("circle")
 </script>
 
     <!-- Button for choosing behaviors -->
-    <script> 
+    <script>
     function getSelectedCheckboxValues(name) {
     const checkboxes = document.querySelectorAll(`input[name="behavior"]:checked`);
     let values = [];
@@ -361,7 +366,7 @@ var sq = svg.append("circle")
     .attr("fill", "#d76103")
     .attr("r", function(){
       var radius = 150;
-      for (i = 0; i < sq_data.length; i++) {  
+      for (i = 0; i < sq_data.length; i++) {
         if(behaviors[0] == "approaches" && sq_data[i].approaches == "TRUE"){
           total += 1;
         } else if(behaviors[0] == "runs_from" && sq_data[i].runs_from == "TRUE"){
@@ -382,7 +387,7 @@ var sq = svg.append("circle")
     d3.select("#num_squirrel1").text("Number of Squirrels: "+total+" Percentage of total squirrels: "+percentage+"%")
 }
 
-    </script> 
+    </script>
 
 
 <!-- End of Script -->
