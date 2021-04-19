@@ -1,7 +1,6 @@
 <!-- Code from d3-graph-gallery.com -->
 <!DOCTYPE html>
 <html>
-  <body>
   <meta charset="utf-8">
   <!-- Load d3.js -->
   <script src="https://d3js.org/d3.v4.js"></script>
@@ -15,6 +14,57 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <head>
+    <style type="text/css">
+      .header {
+        padding: 30px;
+        text-align: center;
+        background: #1abc9c;
+        color: white;
+      }
+      h1{
+        text-align:center;
+        font-size: 40px;
+        font-family: Georgia, serif;
+      }
+      h2{
+        text-align:center;
+        font-size: 20px;
+        font-family: Georgia, serif;
+      }
+      h3{
+        text-align:left;
+        font-size: 250%;
+        font-family: Georgia, serif;
+      }
+      p{
+        text-align:left;
+        font-size: 20px;
+        font-family: Georgia, serif;
+      }
+      a{
+        text-align:left;
+        font-size:20px;
+        font-family: Georgia, serif;
+      }
+      .dropdown, .dropdown-menu li {
+        padding:10px;
+      }
+      .dropdown-menu li {
+        transition:all 0.3s ease;
+      }
+      .dropdown-menu li:hover {
+        background-color:#ccc;
+      }
+      /*#map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }*/
+    </style>
+  </head>
+  <body>
 
 
   <div class="header">
@@ -24,30 +74,56 @@
   <br>
   <br>
   <div class="container">
-    <h3> <b> Humble Beginnings </b> </h3> <br>
-    <p> Our journey through Central Park on April 3rd had one critical goal: <b><i> Find and take photos of as many squirrels as possible </b></i> <br> </p>
-    <p> Our project was inspired and based on the data collected by New York volunteers through the <a href= "https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-10-29">2018 Squirrel Census</a>,which sought to <br> </p>
-    <p> take inventory of the total squirrel population of New York's own Central Park. As we carried out our 2 hour walkthrough of </p>
-    <p> the north section of Central Park, we began to notice some of the patterns that were reflected in the data sat we analyze in our project:</p><br>
+    <div class="row">
+      <div class="col-9 col-md-8">
+        <h3> <b> Humble Beginnings </b> </h3> <br>
+        <p> Our journey through Central Park on April 3rd had one critical goal: <br>
+          <b> <i> Find and take photos of as many squirrels as possible </b></i> </p>
+        <p> Our project was inspired and based on the data collected by New York volunteers through the <a href= "https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-10-29"> 2018 Squirrel Census</a>, which sought to take inventory of the total squirrel population of New York's own Central Park. <br><p>As we carried out our 2 hour walkthrough of the north section of Central Park, we began to notice some of the patterns that were reflected in the data sat we analyze in our project.</p><br>
+      </div>
 
-    <h3> <b> Squirrel Colors </b> </h3>
-    <p>Our initial visualization is a simple bar chart that shows how common particular colors of squirrels are in the park. <br>
-	     The data set, <b>(as well as our own experience!)</b> shows that gray squirrels are quite the Queens of Central Park.</p>
-    <img src="color_squirrels.png"></img>
-    <p>Find our static visualization code <a href= "https://observablehq.com/@rupalg/horizontal-bar-chart">here </a></p>
+      <div class="col-3 col-md-4">
+        <figure>
+          <img src="photos/selfie.jpg" height ="300px"></img>
+          <figcaption>Rupal, Caroline, and David at Central Park</figcaption>
+        </figure>
+      </div>
 
-    <h3> <b> Squirrel Activity Heatmap </b> </h3>
-    <br>
-    <p> However, the real diversity of our furry friends can be seen in where they are located and what activities they carry out. <br>
-		    Thus, this collection of heatmaps accomplishes 2 main goals. The first is to showcase the general location <br>
-		    of squirrels within the park, as shown in the default presented heatmap. This is allows to see where squirrels <br>
-		    can and can't be found <i> (Squirrels don't seem to enjoy swimming or the Delacorte Theatre that much!)</i>. <br>
-		    The second is to show concentration of different squirrel activities throughout the park, specifically <b>running, <br>
-		    chasing, foraging, eating and climbing</b>. </p> <br>
-        <!-- </div> -->
+    </div> 
+  <!-- </div> --> 
+  <br><br>
+  <div class="row">
+    <div class="col-9 col-md-9">
+      <h3> <b> Squirrel Colors </b> </h3>
+      <p>Our initial visualization is a simple bar chart that shows how common particular colors of squirrels are in the park. <br>
+  	     The data set, <b>(as well as our own experience!)</b> shows that gray squirrels are quite the Queens of Central Park.</p>
+      <img src="color_squirrels.png"></img>
+      <p>Find our static visualization code <a href= "https://observablehq.com/@rupalg/horizontal-bar-chart">here </a></p>
+    </div>
+    
+  </div>
+  <!-- </div> -->
+   <br><br>
+  <div class="row">
+    <div class="col-8 col-md-8">
+      <h3> <b> Squirrel Activity Heatmap </b> </h3>
+      <br>
+      <p> 
+          The real diversity of our furry friends can be seen in where they are located and what activities they carry out. <br><br>
+  		    Thus, this collection of heatmaps accomplishes <b>2 main goals</b>. <br>The first is to showcase the <b>general location</b> 
+  		    of squirrels within the park, as shown in the default presented heatmap. This is allows to see where squirrels
+  		    can and can't be found <i> (Squirrels don't seem to enjoy swimming or the Delacorte Theatre that much!)</i>. 
+  		    <br>The second is to show <b>concentration</b> of different squirrel activities throughout the park, specifically <b>running,
+  		    chasing, foraging, eating and climbing</b>. </p> 
+          <!-- </div> -->
+    </div>
+    <div class="col-4 col-md-4">
+      <video height="400" width= "333" autoplay muted>
+        <source src="photos/eating.mp4" type="video/mp4"></source>
+      </video>
+    </div>
 
     <!-- Create a div where the graph will take place -->
-
     <div class="container">
       <div class="dropdown">
         <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Squirrel Behavior
@@ -62,15 +138,16 @@
         </ul>
       </div><br>
     </div>
+  </div>
 
     <div id="my_dataviz"></div>
 
-    <img src="newmap.jpg" width="400px" style="opacity:0.5; margin-top:-1220px; margin-left:500px;"/> -->
+    <img src="newmap.jpg" width="400px" style="opacity:0.5; margin-top:-1220px; margin-left:500px;"/> 
 
 
     <h3> <b> Squirrel Activities </b> </h3>
     <p>If you were curious how many squirrels can be found racing around the park or climbing up the trees, <br>
-       Use this to filter between squirrel activities to see the <b>percentage of squirrels</b> performing each activity in Central Park! </p>
+       use this to filter between squirrel activities to see the <b>percentage of squirrels</b> performing each activity! </p>
 
     <input type="checkbox" name="activity" value="running"> Running
     <input type="checkbox" name="activity" value="chasing"> Chasing
@@ -81,11 +158,11 @@
 
     <button id="btn" onclick="newUpdate()">Update</button>
     <div id="my_test"></div>
-    <div id="num_squirrel"> </div> -->
+    <p><span id="num_squirrel"> None selected or not updated. </span></p>  <br> 
 
     <h3> <b> Squirrel Behavior </b> </h3>
-    <p>If you were curious on how many photogenic squirrels are in Central Park (or which squirrels won't give you the time of day...) <br>
-       use this to filter between squirrel activities to see the <b>percentage of squirrels</b> with a specific behavior in Central Park! </p>
+    <p>If you were curious on how many photogenic squirrels are in Central Park (or which won't give you the time of day...) <br>
+       use this to filter between squirrel activities to see the <b>percentage of squirrels</b> with a specific behavior! </p>
     <input type="radio" name="behavior" value="approaches"> Approaches
     <input type="radio" name="behavior" value="runs_from"> Runs Away
     <input type="radio" name="behavior" value="indifferent"> Indifferent
@@ -93,64 +170,24 @@
 
     <button id="btn2" onclick="newUpdate2()">Update</button>
     <div id="my_test2"></div>
-    <div id="num_squirrel2"></div>
+    <p><span id="num_squirrel2"> None selected or not updated. </span></p> <br>
 
     <h3> <b> Squirrel Map </b> </h3>
-    <p>Use this map to explore <b>squirrels by color, location, activity and fur highlights</b> in Central Park! </p>
-    <div id='map' style='width: 600px; height: 600px;'></div>
+    <p>Use this map to explore <b>squirrels by color, location, activity and fur highlights</b> in Central Park!</p> 
+    <div id='map' style='width: 1000px; height: 560px;'></div> <br><br>
+
+    <h3> <b> Pictures </b> </h3>
+    <img src="photos/pic_one.jpg" height ="270px"></img>
+    <img src="photos/pic_two.jpg" height ="270px"></img>
+    <img src="photos/pic_three.jpg" height ="270px"></img>
+    <img src="photos/pic_four.jpg" height ="270px"></img>
+    <img src="photos/pic_five.jpg" height ="270px"></img>
+
+    <br><br><br>
 
   </div>
   </body>
 </html>
-
-  <style type="text/css">
-  .header {
-    padding: 30px;
-    text-align: center;
-    background: #1abc9c;
-    color: white;
-  }
-  h1{
-    text-align:center;
-    font-size: 40px;
-    font-family: Georgia, serif;
-  }
-  h2{
-    text-align:center;
-    font-size: 20px;
-    font-family: Georgia, serif;
-  h3{
-    text-align:left;
-    font-size: 250%;
-    font-family: Georgia, serif;
-  }
-  p{
-    text-align:left;
-    font-size: 200%;
-    font-family: Georgia, serif;
-  }
-  a{
-    text-align:left;
-    font-size:150%;
-    font-family: Georgia, serif;
-  }
-  .dropdown, .dropdown-menu li {
-    padding:10px;
-  }
-  .dropdown-menu li {
-    transition:all 0.3s ease;
-  }
-  .dropdown-menu li:hover {
-    background-color:#ccc;
-  }
-  #map {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-  }
-  </style>
-
 
 <script>
 //script for the squirrel activity visualization
@@ -167,6 +204,14 @@
   .append("g")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
+  var svg = d3.select("#my_test2")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
 
   //Read the data
   d3.csv("https://raw.githubusercontent.com/rupalg/rupalg.github.io/main/central-park-squirrels/nyc_squirrels.csv", function(data) {
@@ -239,6 +284,7 @@
   function newUpdate(){
     var total = 0;
     activities = getSelectedCheckboxValues('activity');
+
     d3.select("#testCircle")
     .transition()
     .delay(100)
@@ -313,6 +359,7 @@
   function newUpdate2(){
     var total = 0;
     behaviors = getSelectedCheckboxValues2('behavior');
+
     d3.select("#testCircle2")
     .transition()
     .delay(100)
