@@ -117,6 +117,9 @@
   		    can and can't be found <i> (Squirrels don't seem to enjoy swimming or the Delacorte Theatre that much!)</i>.
   		    <br>The second is to show <b>concentration</b> of different squirrel activities throughout the park, specifically <b>running,
   		    chasing, foraging, eating and climbing</b>. </p>
+          <p>
+            Please note that each individual heatmap has been adjusted so the color scale is based on the maximum value of the individual dataset for each behavior, rather than the maximum of the entire dataset.
+          </p>
           <!-- </div> -->
     </div>
     <div class="col-4 col-md-4">
@@ -178,12 +181,17 @@
     <p>Use this map to explore <b>squirrels by color, location, activity and fur highlights</b> in Central Park!</p>
     <div id='map' style='width: 1000px; height: 560px;'></div> <br><br>
 
-    <h3> <b> Pictures </b> </h3>
-    <img src="photos/pic_one.jpg" height ="270px"></img>
-    <img src="photos/pic_two.jpg" height ="270px"></img>
-    <img src="photos/pic_three.jpg" height ="270px"></img>
-    <img src="photos/pic_four.jpg" height ="270px"></img>
-    <img src="photos/pic_five.jpg" height ="270px"></img>
+
+      <h3 style="text-align:center;"> <b> Pictures </b> </h3>
+      <div style="display:flex; justify-content:center;width:70vw;margin:auto;">
+      <div>
+        <img src="photos/pic_one.jpg" height ="270px"></img>
+        <img src="photos/pic_two.jpg" height ="270px"></img>
+        <img src="photos/pic_three.jpg" height ="270px"></img>
+        <img src="photos/pic_four.jpg" height ="270px"></img>
+        <img src="photos/pic_five.jpg" height ="270px"></img>
+      </div>
+    </div>
 
     <br><br><br>
 
@@ -478,7 +486,7 @@ function g(behavior, max) {
     tooltip
       .html("Squirrels: " + d.value)
       .style("left", (d3.mouse(this)[0]) + "px")
-      .style("top", (d3.mouse(this)[1] + 1600) + "px")
+      .style("top", (d3.mouse(this)[1] + 1700) + "px")
     }
   }
   var mouseleave = function(d) {
