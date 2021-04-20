@@ -80,6 +80,8 @@
         <p> Our journey through Central Park on April 3rd had one critical goal: <br>
           <b> <i> Find and take photos of as many squirrels as possible </b></i> </p>
         <p> Our project was inspired and based on the data collected by New York volunteers through the <a href= "https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-10-29"> 2018 Squirrel Census</a>, which sought to take inventory of the total squirrel population of New York's own Central Park. <br><p>As we carried out our 2 hour walkthrough of the north section of Central Park, we began to notice some of the patterns that were reflected in the dataset we analyzed in our project.</p><br>
+
+        <a href="https://dr2948.medium.com/squirrels-in-central-park-the-nuttiest-question-writeup-b6866718a9b"><button type="button" class="btn btn-primary">Read the writeup</button></a>
       </div>
 
       <div class="col-3 col-md-4">
@@ -186,6 +188,9 @@
     <br><br><br>
 
   </div>
+
+  <div style="display:flex; justify-content:center;"><a href="https://dr2948.medium.com/squirrels-in-central-park-the-nuttiest-question-writeup-b6866718a9b"><button type="button" class="btn btn-primary" style="margin:auto">Check out the writeup</button></a></div>
+
   </body>
 </html>
 
@@ -231,39 +236,6 @@
       .attr("fill", "#fff1f0")
       .attr("r", 150);
 
-    // create a tooltip
-    // var tooltip = d3.select("#my_test")
-    //   .append("g")
-    //   .style("opacity", 0)
-    //   .attr("class", "tooltip")
-    //   .style("background-color", "white")
-    //   .style("border", "solid")
-    //   .style("border-width", "2px")
-    //   .style("border-radius", "5px")
-    //   .style("padding", "5px")
-
-    // Three function that change the tooltip when user hover / move / leave a cell
-    // var mouseover = function(d) {
-    //   tooltip
-    //     console.log("check")
-    //     .style("opacity", 1)
-    //   d3.select(this)
-    //     .style("stroke", "black")
-    //     .style("opacity", 1)
-    // }
-    // var mousemove = function(d) {
-    //   tooltip
-    //     .html("The number of squirrels with this behavior is " + total)
-    //     .style("left", (d3.mouse(this)[0]+70) + "px")
-    //     .style("top", (d3.mouse(this)[1]) + "px");
-    // }
-    // var mouseleave = function(d) {
-    //   tooltip
-    //     .style("opacity", 0)
-    //   d3.select(this)
-    //     .style("stroke", "none")
-    //     .style("opacity", 0.8)
-    // }
   })
     function getSelectedCheckboxValues(name) {
       const checkboxes = document.querySelectorAll(`input[name="${name}"]:checked`);
