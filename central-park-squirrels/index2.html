@@ -89,8 +89,8 @@
         </figure>
       </div>
 
-    </div> 
-  <!-- </div> --> 
+    </div>
+  <!-- </div> -->
   <br><br>
   <div class="row">
     <div class="col-9 col-md-9">
@@ -100,7 +100,7 @@
       <img src="color_squirrels.png"></img>
       <p>Find our static visualization code <a href= "https://observablehq.com/@rupalg/horizontal-bar-chart">here </a></p>
     </div>
-    
+
   </div>
   <!-- </div> -->
    <br><br>
@@ -108,13 +108,13 @@
     <div class="col-8 col-md-8">
       <h3> <b> Squirrel Activity Heatmap </b> </h3>
       <br>
-      <p> 
+      <p>
           The real diversity of our furry friends can be seen in where they are located and what activities they carry out. <br><br>
-  		    Thus, this collection of heatmaps accomplishes <b>2 main goals</b>. <br>The first is to showcase the <b>general location</b> 
+  		    Thus, this collection of heatmaps accomplishes <b>2 main goals</b>. <br>The first is to showcase the <b>general location</b>
   		    of squirrels within the park, as shown in the default presented heatmap. This is allows to see where squirrels
-  		    can and can't be found <i> (Squirrels don't seem to enjoy swimming or the Delacorte Theatre that much!)</i>. 
+  		    can and can't be found <i> (Squirrels don't seem to enjoy swimming or the Delacorte Theatre that much!)</i>.
   		    <br>The second is to show <b>concentration</b> of different squirrel activities throughout the park, specifically <b>running,
-  		    chasing, foraging, eating and climbing</b>. </p> 
+  		    chasing, foraging, eating and climbing</b>. </p>
           <!-- </div> -->
     </div>
     <div class="col-4 col-md-4">
@@ -142,7 +142,7 @@
 
     <div id="my_dataviz"></div>
 
-    <img src="newmap.jpg" width="400px" style="opacity:0.5; margin-top:-1220px; margin-left:500px;"/> 
+    <img src="newmap.jpg" width="400px" style="opacity:0.5; margin-top:-1220px; margin-left:500px;"/>
 
 
     <h3> <b> Squirrel Activities </b> </h3>
@@ -158,7 +158,7 @@
 
     <button id="btn" onclick="newUpdate()">Update</button>
     <div id="my_test"></div>
-    <p><span id="num_squirrel"> None selected or not updated. </span></p>  <br> 
+    <p><span id="num_squirrel"> None selected or not updated. </span></p>  <br>
 
     <h3> <b> Squirrel Behavior </b> </h3>
     <p>If you were curious on how many photogenic squirrels are in Central Park (or which won't give you the time of day...) <br>
@@ -173,7 +173,7 @@
     <p><span id="num_squirrel2"> None selected or not updated. </span></p> <br>
 
     <h3> <b> Squirrel Map </b> </h3>
-    <p>Use this map to explore <b>squirrels by color, location, activity and fur highlights</b> in Central Park!</p> 
+    <p>Use this map to explore <b>squirrels by color, location, activity and fur highlights</b> in Central Park!</p>
     <div id='map' style='width: 1000px; height: 560px;'></div> <br><br>
 
     <h3> <b> Pictures </b> </h3>
@@ -506,7 +506,7 @@ function g(behavior, max) {
     tooltip
       .html("Squirrels: " + d.value)
       .style("left", (d3.mouse(this)[0]) + "px")
-      .style("top", (d3.mouse(this)[1] + 1200) + "px")
+      .style("top", (d3.mouse(this)[1] + 2400) + "px")
     }
   }
   var mouseleave = function(d) {
