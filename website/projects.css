@@ -1,0 +1,80 @@
+body{
+    background-color: #FCE8E1;
+}
+
+.rectangle1{
+    height:50%;
+    width: 25%;
+    left: 60%;
+    filter: blur(5em);
+    transform: rotate(-133.77deg);
+    background-color: #E1C0F7;
+    display: inline-block;
+    z-index: -100;
+    position: absolute;
+}
+
+.rectangle2{
+    height:50%;
+    width: 15%;
+    left: 10%;
+    top: 30%;
+    filter: blur(3em);
+    transform: rotate(64.26deg);
+    background-color: #FFF8F0;
+    display: inline-block;
+    z-index: -100;
+    position: absolute;
+}
+
+nav{
+    text-align: right;
+    padding: 1% 10% 0 0;
+}
+
+p{
+    display: inline;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+
+.selected_tab{
+    font-weight: 500;
+}
+
+.back_slash{
+    color: #d9d9d9;
+}
+
+project{
+    text-align: left;
+    margin: auto;
+    width: 80%;
+}
+
+h1{
+    text-align: center;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+}
+
+cards{
+    width: 80%;
+    /* background-color: red; */
+    margin: auto;
+    display: flex;
+}
+
+.card{
+    margin: 1%;
+    padding: 1.33%;
+    width: 31%;
+    background-color: #ffffffaf;
+    border:0px;
+}
+
+p1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
