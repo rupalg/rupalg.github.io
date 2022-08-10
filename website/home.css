@@ -1,0 +1,90 @@
+body{
+    background-color: #E5F9FC;
+}
+
+.rectangle1{
+    height:50%;
+    width: 25%;
+    left: 60%;
+    filter: blur(5em);
+    transform: rotate(-133.77deg);
+    background-color: #E1C0F7;
+    display: inline-block;
+    z-index: -100;
+    position: absolute;
+}
+
+.rectangle2{
+    height:50%;
+    width: 15%;
+    left: 10%;
+    top: 30%;
+    filter: blur(3em);
+    transform: rotate(64.26deg);
+    background-color: #FFF8F0;
+    display: inline-block;
+    z-index: -100;
+    position: absolute;
+}
+
+section{
+    margin: auto;
+    width: 40%; 
+    padding: 6em;
+    text-align: center;
+    display: block;
+}
+h1{
+    text-align: center;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 400;
+    font-size: 3em;
+}
+
+p1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+    display: block;
+}
+
+.btnstyle{
+    background-color: #2F2F2F;
+    font-size: 1em;
+    color: #FFFFFF;
+    width: 30%;
+    border-radius: 10%;
+    padding: 0.5em;
+}
+
+nav{
+    text-align: right;
+    padding: 1% 10% 0 0;
+}
+p{
+    display: inline;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+
+.selected_tab{
+    font-weight: 500;
+}
+.back_slash{
+    color: #d9d9d9;
+}
+
+.circle{
+    height: 2.5em;
+    width: 2.5em;
+    background-color: #D9d9d9d9;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0.5em;
+    box-shadow: -0.25em 0.25em 0.1em #b2c2d5;
+    /* background: repeating-linear-gradient(-45deg, #D9d9d9d9 0 0.25em, black 0.25em 0.5em); */
+}
+
+.addButtonSelection{
+    background: repeating-linear-gradient(-45deg, #D9d9d9d9 0 0.25em, black 0.25em 0.5em);
+}
